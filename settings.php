@@ -22,27 +22,14 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+
 defined('MOODLE_INTERNAL') || die();
 
-$THEME->name = 'liquid';
-$THEME->sheets = [];
-$THEME->editor_sheets = [];
-$THEME->editor_scss = ['editor'];
-$THEME->usefallback = true;
-$THEME->scss = function($theme) {
-    return theme_liquid_get_main_scss_content($theme);
-};
-$THEME->parents = ['boost'];
-$THEME->enable_dock = false;
-$THEME->extrascsscallback = 'theme_liquid_get_extra_scss';
-$THEME->prescsscallback = 'theme_liquid_get_pre_scss';
-$THEME->yuicssmodules = array();
-$THEME->rendererfactory = 'theme_overridden_renderer_factory';
-$THEME->requiredblocks = '';
-$THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
-$THEME->iconsystem = \core\output\icon_system::FONTAWESOME;
-$THEME->haseditswitch = true;
-$THEME->usescourseindex = true;
-$THEME->activityheaderconfig = [
-    'notitle' => true
-];
+if ($ADMIN->fulltree) {
+  $settings = new theme_boost_admin_settingspage_tabs('themesettingliquid', get_string('configtitle', 'theme_liquid'));
+  
+  require('settings/colors.php');
+  require('settings/typography.php');
+  require('settings/borders.php');
+  require('settings/advanced.php');
+}

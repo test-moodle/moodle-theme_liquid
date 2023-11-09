@@ -22,4 +22,78 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die(); 
+defined('MOODLE_INTERNAL') || die();
+
+/**
+ * Returns the main SCSS content.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
+function theme_liquid_get_main_scss_content($theme) {
+  global $CFG;
+
+  $scss = '';
+  $filename = !empty($theme->settings->preset) ? $theme->settings->preset : null;
+  $fs = get_file_storage();
+
+  $context = context_system::instance();
+  if ($filename == 'default.scss') {
+      $scss .= file_get_contents($CFG->dirroot . '/theme/liquid/scss/preset/default.scss');
+  } else if ($filename == 'plain.scss') {
+      $scss .= file_get_contents($CFG->dirroot . '/theme/liquid/scss/preset/plain.scss');
+  } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_liquid', 'preset', 0, '/', $filename))) {
+      $scss .= $presetfile->get_content();
+  } else {
+      $scss .= file_get_contents($CFG->dirroot . '/theme/liquid/scss/preset/default.scss');
+  }
+  return $scss;
+}
+
+/**
+ * Get SCSS to prepend.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return array
+ */
+function theme_liquid_get_pre_scss($theme) {
+  $scss = '';
+  $configurable = [
+      // Config key => [variableName, ...].
+      'primarycolor' => ['primary'],
+      'successcolor' => ['success'],
+      'infocolor' => ['info'],
+      'warningcolor' => ['warning'],
+      'dangercolor' => ['danger'],
+      'secondarycolor' => ['secondary'],
+   ];
+
+  // Prepend variables first.
+  foreach ($configurable as $configkey => $targets) {
+      $value = isset($theme->settings->{$configkey}) ? $theme->settings->{$configkey} : null;
+      if (empty($value)) {
+          continue;
+      }
+      array_map(function($target) use (&$scss, $value) {
+          $scss .= '$' . $target . ': ' . $value . ";\n";
+      }, (array) $targets);
+  }
+
+  // Prepend pre-scss.
+  if (!empty($theme->settings->scsspre)) {
+      $scss .= $theme->settings->scsspre;
+  }
+
+  return $scss;
+}
+
+/**
+ * Inject additional SCSS.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
+function theme_almond_get_extra_scss($theme) {
+  $content = '';
+  return !empty($theme->settings->scss) ? $theme->settings->scss . ' ' . $content : $content;
+}
