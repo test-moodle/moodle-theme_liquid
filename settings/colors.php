@@ -30,42 +30,48 @@ $page = new admin_settingpage('theme_liquid_colors', get_string('colorssettings'
 // Primary color.
 $name = 'theme_liquid/primarycolor';
 $title = get_string('primarycolor', 'theme_liquid');
-$setting = new admin_setting_configcolourpicker($name, $title, '', '');
+$default = '#448c74';
+$setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
 // Success color.
 $name = 'theme_liquid/successcolor';
 $title = get_string('successcolor', 'theme_liquid');
-$setting = new admin_setting_configcolourpicker($name, $title, '', '');
+$default = '#3fca90';
+$setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
 // Info color.
 $name = 'theme_liquid/infocolor';
 $title = get_string('infocolor', 'theme_liquid');
-$setting = new admin_setting_configcolourpicker($name, $title, '', '');
+$default = '#3f7fca';
+$setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
 // Warning color.
 $name = 'theme_liquid/warningcolor';
 $title = get_string('warningcolor', 'theme_liquid');
-$setting = new admin_setting_configcolourpicker($name, $title, '', '');
+$default = '#edcb50';
+$setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
 // Danger color.
 $name = 'theme_liquid/dangercolor';
 $title = get_string('dangercolor', 'theme_liquid');
-$setting = new admin_setting_configcolourpicker($name, $title, '', '');
+$default = '#ed5050';
+$setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
 // Secondary color.
 $name = 'theme_liquid/secondarycolor';
 $title = get_string('secondarycolor', 'theme_liquid');
-$setting = new admin_setting_configcolourpicker($name, $title, '', '');
+$default = '#448c74';
+$setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 

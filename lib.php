@@ -66,6 +66,9 @@ function theme_liquid_get_pre_scss($theme) {
       'warningcolor' => ['warning'],
       'dangercolor' => ['danger'],
       'secondarycolor' => ['secondary'],
+      'fontfamily' => ['font-family-base'],
+      'rootfont' => ['rootfont'],
+      'bodyfont' => ['bodyfont'],
    ];
 
   // Prepend variables first.

@@ -32,13 +32,15 @@ $title = get_string('googlefonturl', 'theme_liquid');
 $description = get_string('googlefonturl_desc', 'theme_liquid');
 $default = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
 $setting = new admin_setting_configtext('theme_liquid/googlefonturl', $title, $description, $default, PARAM_TEXT);
+$setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
 // Font family.
 $title = get_string('fontfamily', 'theme_liquid');
 $description = get_string('fontfamily_desc', 'theme_liquid');
-$default = '"Inter", sans-serif';
+$default = '\'Inter\', sans-serif';
 $setting = new admin_setting_configtext('theme_liquid/fontfamily', $title, $description, $default, PARAM_TEXT);
+$setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
 // Root font size, rem.
