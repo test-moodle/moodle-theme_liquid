@@ -29,43 +29,29 @@ $page = new admin_settingpage('theme_liquid_borders', get_string('borderssetting
 
 // Border width.
 $title = get_string('borderwidth', 'theme_liquid');
-$default = 1;
-$setting = new admin_setting_configtext('theme_liquid/borderwidth', $title, '', $default, PARAM_FLOAT);
+$default = '1px';
+$setting = new admin_setting_configtext('theme_liquid/borderwidth', $title, '', $default, PARAM_TEXT);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
 // Rounded base.
 $title = get_string('roundedbase', 'theme_liquid');
-$default = 1;
-$setting = new admin_setting_configtext('theme_liquid/roundedbase', $title, '', $default, PARAM_FLOAT);
+$default = '1rem';
+$setting = new admin_setting_configtext('theme_liquid/roundedbase', $title, '', $default, PARAM_TEXT);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
 // Rounded SM.
 $title = get_string('roundedsm', 'theme_liquid');
-$default = .75;
-$setting = new admin_setting_configtext('theme_liquid/roundedsm', $title, '', $default, PARAM_FLOAT);
+$default = '0.75rem';
+$setting = new admin_setting_configtext('theme_liquid/roundedsm', $title, '', $default, PARAM_TEXT);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
 // Rounded LG.
 $title = get_string('roundedlg', 'theme_liquid');
-$default = 1.125;
-$setting = new admin_setting_configtext('theme_liquid/roundedlg', $title, '', $default, PARAM_FLOAT);
-$setting->set_updatedcallback('theme_reset_all_caches');
-$page->add($setting);
-
-// Rounded XL.
-$title = get_string('roundedxl', 'theme_liquid');
-$default = 1.5;
-$setting = new admin_setting_configtext('theme_liquid/roundedxl', $title, '', $default, PARAM_FLOAT);
-$setting->set_updatedcallback('theme_reset_all_caches');
-$page->add($setting);
-
-// Rounded 2XL.
-$title = get_string('roundedxxl', 'theme_liquid');
-$default = 2.25;
-$setting = new admin_setting_configtext('theme_liquid/roundedxxl', $title, '', $default, PARAM_FLOAT);
+$default = '1.125rem';
+$setting = new admin_setting_configtext('theme_liquid/roundedlg', $title, '', $default, PARAM_TEXT);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 

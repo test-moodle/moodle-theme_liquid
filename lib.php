@@ -67,8 +67,12 @@ function theme_liquid_get_pre_scss($theme) {
       'dangercolor' => ['danger'],
       'secondarycolor' => ['secondary'],
       'fontfamily' => ['font-family-base'],
-      'rootfont' => ['rootfont'],
-      'bodyfont' => ['bodyfont'],
+      'rootfont' => ['font-size-root'],
+      'bodyfont' => ['font-size-base'],
+      'borderwidth' => ['border-width'],
+      'roundedbase' => ['border-radius'],
+      'roundedlg' => ['border-radius-lg'],
+      'roundedsm' => ['border-radius-sm'],
    ];
 
   // Prepend variables first.
