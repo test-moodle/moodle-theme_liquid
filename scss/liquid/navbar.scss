@@ -1,0 +1,66 @@
+.navbar {
+  &.fixed-top {
+    height: $navbar-height;
+    border-bottom: 0;
+
+    @include media-breakpoint-up(md) {
+      left: $navbar-width;
+    }
+
+    .nav-tabs {
+      height: 100%;
+      border: none;
+      background-color: inherit;
+      max-width: none;
+
+      .nav-link {
+        border: 0;
+        border-radius: 0;
+        background: none;
+        color: $gray-700;
+
+        &:hover,
+        &:focus,
+        &.active {
+          color: $primary;
+        }
+      }
+  }
+  }
+
+  &.fixed-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: $navbar-width;
+    background-color: $primary;
+    z-index: #{$zindex-fixed + 1};
+  }
+
+  .navbar-brand {
+    height: $navbar-height;
+    padding: $primary-nav-padding-x $primary-nav-padding-y;
+
+    img {
+      height: 40px;
+      max-height: 100%;
+    }
+  }
+
+  .primary-navigation {
+    padding: $primary-nav-padding-x $primary-nav-padding-y;
+
+    a {
+      color: $primary-nav-color;
+    }
+  }
+}
+
+#page {
+  margin-top: $navbar-height;
+
+  @include media-breakpoint-up(md) {
+    margin-left: $navbar-width;
+  }
+}

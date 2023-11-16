@@ -103,7 +103,10 @@ $body-bg:                   $gray-100 !default;
 $body-color:                $gray-700 !default;
 
 // Navbar variables.
+$navbar-width:              300px !default;
+$navbar-height:             75px !default;
 $primary-nav-padding-y:     0.75rem !default;
+$primary-nav-color:         $white !default;
 
 // Heading variables.
 $headings-color:            $gray-900;

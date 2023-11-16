@@ -30,7 +30,7 @@ $page = new admin_settingpage('theme_liquid_colors', get_string('colorssettings'
 // Primary color.
 $name = 'theme_liquid/primarycolor';
 $title = get_string('primarycolor', 'theme_liquid');
-$default = '#448c74';
+$default = '#032633';
 $setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
@@ -70,7 +70,7 @@ $page->add($setting);
 // Secondary color.
 $name = 'theme_liquid/secondarycolor';
 $title = get_string('secondarycolor', 'theme_liquid');
-$default = '#448c74';
+$default = '#EE4723';
 $setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);

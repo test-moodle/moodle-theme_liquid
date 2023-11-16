@@ -1,0 +1,40 @@
+.drawer-toggles {
+  .drawer-toggler {
+    z-index: $zindex-fixed;
+
+    .btn {
+      background-color: $secondary;
+      color: $white;
+    }
+  }
+
+  .drawer-left-toggle {
+    left: $navbar-width;
+  }
+}
+
+#page {
+  &.drawers {
+    &.show-drawer-left {
+      @include media-breakpoint-up(md) {
+        margin-left: calc(#{$navbar-width} + #{$drawer-left-width});
+      }
+    }
+
+    &.show-drawer-right {
+      @include media-breakpoint-up(md) {
+        margin-left: $navbar-width;
+      }
+    }
+  }
+}
+
+.drawer {
+  background-color: $gray-300;
+
+  &.drawer-left {
+    &.show {
+      left: $navbar-width;
+    }
+  }
+}
