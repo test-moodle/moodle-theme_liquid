@@ -55,7 +55,7 @@
         ]
     }
 }}
-<nav class="navbar fixed-left d-none d-md-block p-0" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+<nav class="navbar fixed-left d-none d-lg-flex p-0" aria-label="{{#str}}sitemenubar, admin{{/str}}">
     <a href="{{{ config.homeurl }}}" class="navbar-brand m-0 d-flex text-center w-100">
         {{# output.should_display_navbar_logo }}
             <img src="{{output.get_logo_url}}" class="logo m-auto" alt="{{sitename}}">
@@ -65,19 +65,20 @@
         {{/ output.should_display_navbar_logo }}
     </a>
     {{#primarymoremenu}}
-        <div class="primary-navigation">
+        <div class="primary-navigation mt-3">
             {{> core/moremenu}}
         </div>
     {{/primarymoremenu}}
+
     {{{ output.edit_switch }}}
 </nav>
 <nav class="navbar fixed-top bg-white navbar-expand">
-    <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
+    <button class="navbar-toggler aabtn d-block d-lg-none p-0 mr-3 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
         <span class="navbar-toggler-icon"></span>
         <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
     </button>
 
-    <a href="{{{ config.homeurl }}}" class="navbar-brand m-0 p-0 d-md-none">
+    <a href="{{{ config.homeurl }}}" class="navbar-brand m-0 p-0 d-flex align-items-center d-lg-none">
         {{# output.should_display_navbar_logo }}
             <img src="{{output.get_compact_logo_url}}" class="logo" alt="{{sitename}}">
         {{/ output.should_display_navbar_logo }}

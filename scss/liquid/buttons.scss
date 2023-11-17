@@ -1,0 +1,9 @@
+.btn {
+  &.btn-primary {
+    color: $text-on-primary;
+  }
+
+  &.bg-secondary {
+    color: $text-on-secondary;
+  }
+}

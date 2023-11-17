@@ -1,0 +1,15 @@
+.drawer-left-nav {
+  flex: 1 1 auto;
+  padding: $primary-nav-padding-x $primary-nav-padding-y;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: lighten($primary, 5) $primary;
+
+  .drawercontent {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    z-index: auto;
+    overflow: hidden;
+  }
+}
