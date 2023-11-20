@@ -1,0 +1,84 @@
+.pagelayout-login #page {
+  padding: 0 !important;
+  background: none;
+  background-color: $primary;
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 0;
+  }
+
+  #page-content {
+    height: 100%;
+    margin: 0;
+
+    #region-main-box {
+      padding: 0;
+
+      #region-main {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.login-wrapper {
+  align-items: unset;
+  justify-content: unset;
+}
+
+.login-container {
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+    }
+  }
+}
+
+.loginimage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 3rem;
+
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 auto;
+  }
+}
+
+.loginform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 2rem;
+  text-align: center;
+  background-color: $white;
+  flex: 1 1 auto;
+
+  @include media-breakpoint-up(lg) {
+    width: 50%;
+    max-width: 800px;
+    margin: 0;
+    flex: 0 0 auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.login-heading,
+.login-form,
+.login-divider {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}

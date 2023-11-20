@@ -132,19 +132,19 @@ $primary-nav-padding-y:                 .75rem !default;
 $navbar-light-toggler-icon-bg:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$primary}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 
 // Heading variables.
-$headings-color:                        $gray-900;
-$headings-font-weight:                  600;
+$headings-color:                        $gray-900 !default;
+$headings-font-weight:                  600 !default;
 
 // Button variables.
-$btn-padding-y:                         .75rem;
-$btn-padding-x:                         1.5rem;
+$btn-padding-y:                         .75rem !default;
+$btn-padding-x:                         1.5rem !default;
 
-$input-btn-focus-box-shadow:            $box-shadow;
+$input-btn-focus-box-shadow:            0 !default;
 
 // Form variables.
-$input-padding-y:                       .75rem;
-$input-padding-x:                       1.5rem;
-$custom-control-indicator-checked-bg:   $secondary;
+$input-padding-y:                       .75rem !default;
+$input-padding-x:                       1.5rem !default;
+$custom-control-indicator-checked-bg:   $secondary !default;
 
 // Dropdown variables.
 $dropdown-min-width:                    12rem !default;

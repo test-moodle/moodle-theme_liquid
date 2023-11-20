@@ -1,3 +1,6 @@
 .dropdown-menu {
   box-shadow: $dropdown-box-shadow;
+  animation-name: fadeIn;
+  animation-duration: .2s;
+  animation-fill-mode: both;
 }
