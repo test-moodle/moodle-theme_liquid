@@ -135,6 +135,13 @@ $navbar-light-toggler-icon-bg:          url("data:image/svg+xml,<svg xmlns='http
 $headings-color:                        $gray-900 !default;
 $headings-font-weight:                  600 !default;
 
+$h1-font-size:                          $font-size-root * 2.5 !default;
+$h2-font-size:                          $font-size-root * 2 !default;
+$h3-font-size:                          $font-size-root * 1.75 !default;
+$h4-font-size:                          $font-size-root * 1.5 !default;
+$h5-font-size:                          $font-size-root * 1.25 !default;
+$h6-font-size:                          $font-size-root !default;
+
 // Button variables.
 $btn-padding-y:                         .75rem !default;
 $btn-padding-x:                         1.5rem !default;
@@ -160,6 +167,14 @@ $dropdown-link-hover-bg:                $primary !default;
 
 $dropdown-item-padding-y:               .375rem !default;
 $dropdown-item-padding-x:               1.25rem !default;
+
+// Breadcrumbs variables.
+$breadcrumb-padding-y:                  0 !default;
+$breadcrumb-padding-x:                  0 !default;
+$breadcrumb-bg:                         transparent !default;
+$breadcrumb-border-radius:              0 !default;
+$breadcrumb-divider:                    quote("\e939") !default;
+$breadcrumb-divider-rtl:                quote("\e938") !default;
 
 // Import FontAwesome.
 @import "fontawesome";

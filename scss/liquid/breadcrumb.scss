@@ -1,0 +1,28 @@
+.breadcrumb-item {
+  font-weight: 500;
+  
+  + .breadcrumb-item {
+    &::before {
+      @extend .fa-solid;
+      content: fa-content($fa-var-chevron-right);
+      position: relative;
+      top: -1px;
+      font-size: 10px;
+      float: none;
+    }
+  }
+
+  a {
+    color: $gray-600;
+
+    &:hover {
+      color: $gray-900;
+      text-decoration: none;
+    }
+  }
+
+  &:last-child,
+  &.active {
+    color: $primary;
+  }
+}
