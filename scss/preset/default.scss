@@ -100,6 +100,7 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
+  xlg: 1160px, 
   xl: 1440px
 ) !default;
 
@@ -196,6 +197,9 @@ $nav-link-active-color:                 $primary !default;
 $nav-link-disabled-color:               $gray-600 !default;
 
 $nav-link-transition:                   color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out !default;
+
+// Activity card variables.
+$activity-item-border-radius:           $border-radius-sm;
 
 // Import FontAwesome.
 @import "fontawesome";

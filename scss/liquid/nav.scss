@@ -11,7 +11,7 @@
   }
 
   .nav-link {
-    border-radius: $nav-tabs-border-radius;
+    @include border-radius($nav-tabs-border-radius);
 
     &.disabled {
       font-style: normal;
@@ -19,6 +19,6 @@
   }
 
   .dropdown-menu {
-    border-radius: $nav-tabs-border-radius;
+    @include border-radius($nav-tabs-border-radius);
   }
 }

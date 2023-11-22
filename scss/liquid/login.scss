@@ -138,6 +138,10 @@
   @include media-breakpoint-up(lg) {
     flex: 1 1 auto;
   }
+
+  img {
+    max-height: 100px;
+  }
 }
 
 .loginform {

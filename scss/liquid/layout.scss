@@ -3,6 +3,7 @@
     z-index: $zindex-fixed;
 
     .btn {
+      border-radius: $border-radius;
       background-color: $secondary;
       color: $white;
     }
@@ -11,6 +12,18 @@
   .drawer-left-toggle {
     @include media-breakpoint-up(lg) {
       left: $navbar-width;
+    }
+
+    .btn {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .drawer-right-toggle {
+    .btn {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
   }
 }
