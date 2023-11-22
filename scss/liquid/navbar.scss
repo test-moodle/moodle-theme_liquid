@@ -10,11 +10,14 @@
 
     .nav-tabs {
       height: 100%;
+      margin: 0;
       border: none;
       background-color: inherit;
       max-width: none;
 
       .nav-link {
+        margin: 0;
+        padding: 1rem;
         border: 0;
         border-radius: 0;
         background: none;

@@ -1,6 +1,6 @@
 .breadcrumb-item {
   font-weight: 500;
-  
+
   + .breadcrumb-item {
     &::before {
       @extend .fa-solid;

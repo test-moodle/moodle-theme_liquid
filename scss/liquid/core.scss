@@ -8,8 +8,6 @@
   background: none;
 }
 
-// Accessible focus styling for links, add .aalink to links with custom css classes to get
-// accessible focus styles.
 .aalink,
 #page-footer a:not([class]),
 .arrow_link,
@@ -18,7 +16,8 @@ a:not([class]),
     &.focus,
     &:focus {
         color: $primary;
-        background-color: $gray-100;
+        background-color: transparent;
         box-shadow: none;
+        text-decoration: underline;
     }
 }

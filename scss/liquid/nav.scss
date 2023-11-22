@@ -1,0 +1,24 @@
+/**
+ * Tabs
+ */
+.nav-tabs {
+  margin-left: -.25rem;
+  margin-right: -.25rem;
+
+  .nav-item {
+    margin-left: .25rem;
+    margin-right: .25rem;
+  }
+
+  .nav-link {
+    border-radius: $nav-tabs-border-radius;
+
+    &.disabled {
+      font-style: normal;
+    }
+  }
+
+  .dropdown-menu {
+    border-radius: $nav-tabs-border-radius;
+  }
+}

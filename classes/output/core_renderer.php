@@ -40,4 +40,53 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
     return $output;
   }
+
+  protected function render_context_header(\context_header $contextheader) {
+    if (!isset($contextheader->heading)) {
+      $heading = $this->heading($this->page->heading, $contextheader->headinglevel, 'h1');
+    } else {
+      $heading = $this->heading($contextheader->heading, $contextheader->headinglevel, 'h1');
+    }
+
+    $html = html_writer::start_div('page-context-header');
+
+    if (isset($contextheader->imagedata)) {
+      $html .= html_writer::div($contextheader->imagedata, 'page-header-image mr-2');
+    }
+
+    if (isset($contextheader->prefix)) {
+      $prefix = html_writer::div($contextheader->prefix, 'text-muted text-uppercase small line-height-3');
+      $heading = $prefix . $heading;
+    }
+    $html .= html_writer::tag('div', $heading, array('class' => 'page-header-headings'));
+
+    if (isset($contextheader->additionalbuttons)) {
+      $html .= html_writer::start_div('btn-group header-button-group');
+      foreach ($contextheader->additionalbuttons as $button) {
+        if (!isset($button->page)) {
+          if ($button['buttontype'] === 'togglecontact') {
+            \core_message\helper::togglecontact_requirejs();
+          }
+          if ($button['buttontype'] === 'message') {
+            \core_message\helper::messageuser_requirejs();
+          }
+          $image = $this->pix_icon($button['formattedimage'], $button['title'], 'moodle', array(
+            'class' => 'iconsmall',
+            'role' => 'presentation'
+          ));
+          $image .= html_writer::span($button['title'], 'header-button-title');
+        } else {
+          $image = html_writer::empty_tag('img', array(
+            'src' => $button['formattedimage'],
+            'role' => 'presentation'
+          ));
+        }
+        $html .= html_writer::link($button['url'], html_writer::tag('span', $image), $button['linkattributes']);
+      }
+      $html .= html_writer::end_div();
+    }
+    $html .= html_writer::end_div();
+
+    return $html;
+  }
 }

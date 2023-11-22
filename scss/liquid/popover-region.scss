@@ -1,8 +1,8 @@
 .navbar-nav {
   .popover-region {
-      .icon {
+      > * > .icon {
           font-weight: 400;
-          color: $primary;
+          color: $body-color;
       }
   }
 }
