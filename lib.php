@@ -61,11 +61,13 @@ function theme_liquid_get_pre_scss($theme) {
   $configurable = [
       // Config key => [variableName, ...].
       'primarycolor' => ['primary'],
+      'textprimarycolor' => ['text-on-primary'],
       'successcolor' => ['success'],
       'infocolor' => ['info'],
       'warningcolor' => ['warning'],
       'dangercolor' => ['danger'],
       'secondarycolor' => ['secondary'],
+      'textsecondarycolor' => ['text-on-secondary'],
       'fontfamily' => ['font-family-base'],
       'rootfont' => ['font-size-root'],
       'bodyfont' => ['font-size-base'],

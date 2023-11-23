@@ -35,6 +35,14 @@ $setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
+// Text color on primary color.
+$name = 'theme_liquid/textprimarycolor';
+$title = get_string('textprimarycolor', 'theme_liquid');
+$default = '#FFFFFF';
+$setting = new admin_setting_configcolourpicker($name, $title, '', $default);
+$setting->set_updatedcallback('theme_reset_all_caches');
+$page->add($setting);
+
 // Success color.
 $name = 'theme_liquid/successcolor';
 $title = get_string('successcolor', 'theme_liquid');
@@ -71,6 +79,14 @@ $page->add($setting);
 $name = 'theme_liquid/secondarycolor';
 $title = get_string('secondarycolor', 'theme_liquid');
 $default = '#EE4723';
+$setting = new admin_setting_configcolourpicker($name, $title, '', $default);
+$setting->set_updatedcallback('theme_reset_all_caches');
+$page->add($setting);
+
+// Text color on secondary color.
+$name = 'theme_liquid/textsecondarycolor';
+$title = get_string('textsecondarycolor', 'theme_liquid');
+$default = '#FFFFFF';
 $setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);

@@ -199,7 +199,13 @@ $nav-link-disabled-color:               $gray-600 !default;
 $nav-link-transition:                   color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out !default;
 
 // Activity card variables.
-$activity-item-border-radius:           $border-radius-sm;
+$activity-item-border-radius:           $border-radius-sm !default;
+
+// Tooltip variables.
+$tooltip-border-radius:                 #{$border-radius-sm / 1.5} !default;
+
+// Modal variables.
+$modal-backdrop-opacity:                0.65 !default;
 
 // Import FontAwesome.
 @import "fontawesome";

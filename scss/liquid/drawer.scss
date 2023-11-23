@@ -1,3 +1,30 @@
+.drawer {
+  background-color: $gray-300;
+
+  &.drawer-left {
+    &.show {
+      @include media-breakpoint-up(lg) {
+        left: $navbar-width;
+      }
+    }
+
+    &.drawer-primary {
+      .list-group-item {
+        background: none;
+
+        &.active {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+
+  &-primary {
+    background-color: $primary;
+    color: $text-on-primary;
+  }
+}
+
 .drawercontent {
   padding: 1rem;
 }

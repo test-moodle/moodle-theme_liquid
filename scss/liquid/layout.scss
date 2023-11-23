@@ -1,6 +1,6 @@
 .drawer-toggles {
   .drawer-toggler {
-    z-index: $zindex-fixed;
+    z-index: #{$zindex-fixed - 10};
 
     .btn {
       border-radius: $border-radius;
@@ -62,26 +62,11 @@
         padding-right: 1.5rem;
       }
     }
-  }
-}
 
-.drawer {
-  background-color: $gray-300;
-
-  &.drawer-left {
-    &.show {
-      @include media-breakpoint-up(lg) {
-        left: $navbar-width;
-      }
-    }
-
-    &.drawer-primary {
-      .list-group-item {
-        background: none;
-
-        &.active {
-          background-color: $primary;
-        }
+    #region-main {
+      > .notifications {
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
   }
