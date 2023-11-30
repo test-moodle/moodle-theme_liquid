@@ -43,32 +43,13 @@ $setting = new admin_setting_configtext('theme_liquid/fontfamily', $title, $desc
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
 
-// Root font size, rem.
-$name = 'theme_liquid/rootfont';
-$title = get_string('rootfont', 'theme_liquid');
-$default = '1rem';
-$options = array(
-  '0.75rem' => '.75',
-  '0.875rem' => '.875',
-  '1rem' => '1',
-  '1.05rem' => '1.05',
-  '1.1rem' => '1.1',
-  '1.15rem' => '1.15',
-  '1.25rem' => '1.25',
-  '1.375rem' => '1.375',
-);
-
-$setting = new admin_setting_configselect($name, $title, '', $default, $options);
-$setting->set_updatedcallback('theme_reset_all_caches');
-$page->add($setting);
-
 // Body font size, rem.
 $name = 'theme_liquid/bodyfont';
 $title = get_string('bodyfont', 'theme_liquid');
 $default = '0.875rem';
 $options = array(
-  '0.75rem' => '.75',
-  '0.875rem' => '.875',
+  '0.75rem' => '0.75',
+  '0.875rem' => '0.875',
   '1rem' => '1',
   '1.05rem' => '1.05',
   '1.1rem' => '1.1',

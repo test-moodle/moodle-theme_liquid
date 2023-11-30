@@ -51,7 +51,6 @@ $string['googlefonturl'] = 'Google font URL';
 $string['googlefonturl_desc'] = 'If you would like to use different font, you should paste <a href="https://fonts.google.com" target="_blank">Google font</a> URL in this field.';
 $string['fontfamily'] = 'Font family';
 $string['fontfamily_desc'] = 'Enter a CSS value of font-family you want to use in this field.';
-$string['rootfont'] = 'Root font size, rem';
 $string['bodyfont'] = 'Body font size, rem';
 $string['borderssettings'] = 'Borders settings';
 $string['borderwidth'] = 'Border width';

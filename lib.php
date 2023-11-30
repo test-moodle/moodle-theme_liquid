@@ -69,7 +69,6 @@ function theme_liquid_get_pre_scss($theme) {
       'secondarycolor' => ['secondary'],
       'textsecondarycolor' => ['text-on-secondary'],
       'fontfamily' => ['font-family-base'],
-      'rootfont' => ['font-size-root'],
       'bodyfont' => ['font-size-base'],
       'borderwidth' => ['border-width'],
       'roundedbase' => ['border-radius'],

@@ -138,12 +138,12 @@ $headings-margin-bottom:                1rem !default;
 $headings-color:                        $gray-900 !default;
 $headings-font-weight:                  600 !default;
 
-$h1-font-size:                          $font-size-root * 2.5 !default;
-$h2-font-size:                          $font-size-root * 2 !default;
-$h3-font-size:                          $font-size-root * 1.75 !default;
-$h4-font-size:                          $font-size-root * 1.5 !default;
-$h5-font-size:                          $font-size-root * 1.25 !default;
-$h6-font-size:                          $font-size-root !default;
+$h1-font-size:                          $font-size-base * 2.5 !default;
+$h2-font-size:                          $font-size-base * 2 !default;
+$h3-font-size:                          $font-size-base * 1.75 !default;
+$h4-font-size:                          $font-size-base * 1.5 !default;
+$h5-font-size:                          $font-size-base * 1.25 !default;
+$h6-font-size:                          $font-size-base !default;
 
 // Button variables.
 $btn-padding-y:                         .75rem !default;
@@ -218,7 +218,3 @@ $modal-backdrop-opacity:                0.65 !default;
 
 // Import Liquid theme CSS.
 @import "default";
-
-html {
-    font-size: $font-size-root;
-}
