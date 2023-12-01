@@ -10,7 +10,7 @@
   }
 
   .drawer-left-toggle {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xlg) {
       left: $navbar-width;
     }
 
@@ -33,7 +33,7 @@
     padding-left: .5rem;
     padding-right: .5rem;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xlg) {
       padding-left: 1rem;
       padding-right: 1rem;
     }
@@ -44,7 +44,7 @@
     }
 
     &.show-drawer-left {
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xlg) {
         margin-left: calc(#{$navbar-width} + #{$drawer-left-width});
       }
 
@@ -54,7 +54,7 @@
     }
 
     &.show-drawer-right {
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xlg) {
         margin-left: $navbar-width;
       }
 
@@ -68,6 +68,28 @@
         padding-left: 15px;
         padding-right: 15px;
       }
+    }
+  }
+}
+
+.secondary-nav-helper {
+  ~ #page,
+  ~ #page.drawers {
+    margin-top: #{$navbar-height * 2};
+
+    @include media-breakpoint-up(xlg) {
+      margin-top: $navbar-height;
+    }
+  }
+
+  ~ .drawer-left,
+  ~ .drawer-right {
+    top: #{$navbar-height * 2};
+    height: calc(100vh - #{$navbar-height * 2});
+
+    @include media-breakpoint-up(xlg) {
+      top: $navbar-height;
+      height: calc(100vh - #{$navbar-height});
     }
   }
 }

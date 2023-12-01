@@ -1,0 +1,52 @@
+$dark-bg-color: #191c20;
+$dark-box-bg-color: #121519;
+$dark-text-color: rgba($white, .7);
+$dark-link-color: rgba($white, .85);
+
+[data-theme="dark"] {
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  .navbar-nav .popover-region > * > .icon,
+  .navbar.fixed-top .nav-tabs .nav-link,
+  .navbar.fixed-top .nav-tabs .nav-link:hover,
+  .navbar.fixed-top .nav-tabs .nav-link:focus,
+  .navbar.fixed-top .nav-tabs .nav-link.active {
+    color: $dark-text-color;
+  }
+
+  a {
+    color: $dark-link-color;
+  }
+
+  body,
+  .card,
+  .activity-add, .block-add {
+    background-color: $dark-bg-color;
+  }
+
+  .bg-white,
+  #page.drawers .main-inner,
+  .dropdown-menu {
+    background-color: $dark-box-bg-color !important;
+  }
+
+  .navbar.fixed-left {
+    background-color: #101216;
+  }
+
+  .drawer,
+  .form-control {
+    background-color: $gray-800;
+  }
+}

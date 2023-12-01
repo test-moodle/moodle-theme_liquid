@@ -1,0 +1,189 @@
+#block-region-content {
+  @include media-breakpoint-up(lg) {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: 60fr 40fr;
+  }
+
+  > span {
+    display: none;
+  }
+
+  .block {
+    grid-column: 1/3;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0 !important;
+    }
+
+    &.block_timeline {
+      @include media-breakpoint-up(lg) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+
+    &.block_calendar_month {
+      @include media-breakpoint-up(lg) {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .footer {
+        text-align: center;
+      }
+    }
+
+    &.block_recentlyaccessedcourses {
+      .paging-bar-container {
+        margin-top: -4rem;
+
+        .mt-5 {
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.maincalendar {
+  .controls {
+    width: 100%;
+    margin: 1rem 0 1.25rem;
+  }
+
+  .calendarmonth {
+    width: 100%;
+    margin: 0;
+
+    td,
+    th {
+      position: relative;
+      height: 2.875rem;
+      padding: 0;
+      border: 0;
+      text-align: center !important;
+      font-weight: 400;
+      vertical-align: middle;
+
+      a {
+        font-weight: 500;
+        color: $black;
+      }
+    }
+
+    td {
+      .day-number-circle {
+        width: 2rem;
+        height: 2rem;
+
+        @include media-breakpoint-up(sm) {
+          width: 2.875rem;
+          height: 2.875rem;
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: none !important;
+        color: $black;
+
+        .day-number-circle {
+          border-radius: 50%;
+          background-color: $gray-200;
+          color: $black;
+        }
+      }
+
+      &.today {
+        .day-number-circle {
+          font-weight: 500;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          .day-number-circle {
+            background-color: $primary;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    [data-region="day-content"] {
+      position: absolute;
+      bottom: .5rem;
+      left: 0;
+      width: 100%;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: .1875rem;
+
+        li {
+          padding: 0;
+
+          a {
+            position: relative;
+            display: flex;
+            overflow: visible;
+
+            .eventname {
+              display: none;
+              position: absolute;
+              bottom: calc(100% + .5rem);
+              left: 50%;
+              transform: translateX(-50%);
+              background-color: rgba($black, .9);
+              border-radius: .5rem;
+              padding: .5rem;
+              font-size: .875rem;
+              color: $white;
+              text-decoration: none;
+              overflow: visible;
+              z-index: 2;
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: calc(50% - .5rem);
+                border: .5rem solid transparent;
+                border-top-color: rgba($black, .9);
+              }
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+              .eventname {
+                display: block;
+              }
+            }
+          }
+
+          .calendar-circle {
+            display: block;
+            width: .375rem;
+            height: .375rem;
+            border-radius: .1875rem;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .calendarwrapper {
+    td {
+      > div {
+        #region-main & {
+          height: auto;
+        }
+      }
+    }
+  }
+}

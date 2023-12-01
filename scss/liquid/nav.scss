@@ -2,14 +2,6 @@
  * Tabs
  */
 .nav-tabs {
-  margin-left: -.25rem;
-  margin-right: -.25rem;
-
-  .nav-item {
-    margin-left: .25rem;
-    margin-right: .25rem;
-  }
-
   .nav-link {
     @include border-radius($nav-tabs-border-radius);
 

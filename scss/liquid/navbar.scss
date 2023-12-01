@@ -4,44 +4,59 @@
     border-bottom: 0;
     padding: 0 .5rem;
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xlg) {
       left: $navbar-width;
     }
 
     nav {
-      display: none;
-      height: 100%;
+      position: fixed;
+      top: $navbar-height;
+      left: 0;
+      width: 100%;
+      background-color: $primary;
 
       @include media-breakpoint-up(xlg) {
-        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+        background: none;
       }
     }
 
     .nav-tabs {
-      height: 100%;
       margin: 0;
       border: none;
       background-color: inherit;
       max-width: none;
 
       .nav-link {
+        height: $navbar-height;
         margin: 0;
         padding: 1rem;
         border: 0;
         border-radius: 0;
         background: none;
-        color: $gray-700;
+        color: rgba($text-on-primary, .7);
+
+        @include media-breakpoint-up(xlg) {
+          color: $gray-700;
+        }
 
         &:hover,
         &:focus,
         &.active {
-          color: $primary;
+          color: $text-on-primary;
+
+          @include media-breakpoint-up(xlg) {
+            color: $primary;
+          }
         }
       }
     }
 
     .editmode-switch-form {
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xlg) {
         display: none !important;
       }
     }
@@ -94,7 +109,34 @@
 #page {
   margin-top: $navbar-height;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xlg) {
     margin-left: $navbar-width;
+  }
+}
+
+.toggle-holder {
+  display: flex;
+  height: $navbar-height;
+  align-items: center;
+
+  label {
+    margin: 0;
+    font-size: 1rem;
+
+    &.light {
+      margin-right: 1rem;
+
+      [data-theme="light"] & {
+        color: $primary;
+      }
+    }
+
+    &.dark {
+      margin-left: .5rem;
+
+      [data-theme="dark"] & {
+        color: $secondary;
+      }
+    }
   }
 }

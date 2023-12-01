@@ -46,7 +46,7 @@ $page->add($setting);
 // Success color.
 $name = 'theme_liquid/successcolor';
 $title = get_string('successcolor', 'theme_liquid');
-$default = '#3fca90';
+$default = '#3FCA90';
 $setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
@@ -54,7 +54,7 @@ $page->add($setting);
 // Info color.
 $name = 'theme_liquid/infocolor';
 $title = get_string('infocolor', 'theme_liquid');
-$default = '#3f7fca';
+$default = '#3F7FCA';
 $setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
@@ -62,7 +62,7 @@ $page->add($setting);
 // Warning color.
 $name = 'theme_liquid/warningcolor';
 $title = get_string('warningcolor', 'theme_liquid');
-$default = '#edcb50';
+$default = '#EDCB50';
 $setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
@@ -70,7 +70,7 @@ $page->add($setting);
 // Danger color.
 $name = 'theme_liquid/dangercolor';
 $title = get_string('dangercolor', 'theme_liquid');
-$default = '#ed5050';
+$default = '#ED5050';
 $setting = new admin_setting_configcolourpicker($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);
