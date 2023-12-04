@@ -21,11 +21,17 @@
  */
 
 export const init = () => {
+  const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+
+  if (darkThemeMq.matches && localStorage.getItem("darkThemeEnabled") === null) {
+    localStorage.setItem("darkThemeEnabled", "1");
+  }
+
   const darkThemeToggle = document.getElementById("darktheme-checkbox");
   const storedDarkThemeSetting = localStorage.getItem("darkThemeEnabled");
 
   const setTheme = (theme) => {
-    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute('data-bs-theme', theme);
   };
 
   if (storedDarkThemeSetting === null) {

@@ -1,9 +1,10 @@
 $dark-bg-color: #191c20;
 $dark-box-bg-color: #121519;
 $dark-text-color: rgba($white, .7);
-$dark-link-color: rgba($white, .85);
+$dark-link-color: rgba($white, .9);
+$dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
 
-[data-theme="dark"] {
+[data-bs-theme="dark"] {
   body,
   h1,
   h2,
@@ -21,24 +22,63 @@ $dark-link-color: rgba($white, .85);
   .navbar.fixed-top .nav-tabs .nav-link,
   .navbar.fixed-top .nav-tabs .nav-link:hover,
   .navbar.fixed-top .nav-tabs .nav-link:focus,
-  .navbar.fixed-top .nav-tabs .nav-link.active {
+  .navbar.fixed-top .nav-tabs .nav-link.active,
+  .block .block-cards span.categoryname,
+  .block .block-cards .btn-link,
+  .dropdown-menu,
+   {
     color: $dark-text-color;
   }
 
-  a {
+  a,
+  .maincalendar .calendarmonth td a,
+  .maincalendar .calendarmonth th a,
+  .maincalendar .calendarmonth td:hover .day-number-circle,
+  .maincalendar .calendarmonth td:focus .day-number-circle,
+  .maincalendar .calendarmonth td:active .day-number-circle,
+  .close,
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
     color: $dark-link-color;
   }
 
   body,
   .card,
-  .activity-add, .block-add {
+  .activity-add,
+  .block-add {
     background-color: $dark-bg-color;
   }
 
   .bg-white,
   #page.drawers .main-inner,
-  .dropdown-menu {
+  .dropdown-menu,
+  .maincalendar .calendarmonth td:hover .day-number-circle,
+  .maincalendar .calendarmonth td:focus .day-number-circle,
+  .maincalendar .calendarmonth td:active .day-number-circle,
+  .modal-content,
+  .block .block-cards .btn.btn-link.btn-icon:hover,
+  .block .block-cards .btn.btn-link.btn-icon:focus,
+  .message-app,
+  .list-group-item {
     background-color: $dark-box-bg-color !important;
+  }
+
+  .dropdown-menu,
+  .dropdown-divider,
+  #frontpage-available-course-list .coursebox,
+  #frontpage-course-list .coursebox,
+  .course-search-result .coursebox,
+  .border-bottom,
+  .modal-header,
+  .modal-footer,
+  .mform fieldset,
+  .form-control {
+    border-color: $gray-800;
+  }
+
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    border-color: $dark-link-color;
   }
 
   .navbar.fixed-left {
@@ -46,7 +86,32 @@ $dark-link-color: rgba($white, .85);
   }
 
   .drawer,
-  .form-control {
-    background-color: $gray-800;
+  .form-control,
+  .custom-select {
+    background-color: $gray-900;
+  }
+
+  .dropdown-menu,
+  .drawer-toggles .drawer-toggler .btn {
+    box-shadow: $dark-box-shadow;
+  }
+
+  .block_myoverview,
+  .dashboard-card-footer {
+    background-color: transparent !important;
+  }
+
+  hr {
+    border-color: rgba($white, .1);
+  }
+
+  .navbar.fixed-top .usermenu .dropdown-menu .submenu .header .icon {
+    filter: invert(1);
+  }
+
+  .breadcrumb-item:last-child,
+  .breadcrumb-item.active,
+  .breadcrumb-item a:hover {
+    color: $white;
   }
 }
