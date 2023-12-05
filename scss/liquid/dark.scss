@@ -5,6 +5,8 @@ $dark-link-color: rgba($white, .9);
 $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
 
 [data-bs-theme="dark"] {
+  background-color: $dark-bg-color;
+
   body,
   h1,
   h2,
@@ -25,8 +27,7 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .navbar.fixed-top .nav-tabs .nav-link.active,
   .block .block-cards span.categoryname,
   .block .block-cards .btn-link,
-  .dropdown-menu,
-   {
+  .dropdown-menu {
     color: $dark-text-color;
   }
 
@@ -38,14 +39,31 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .maincalendar .calendarmonth td:active .day-number-circle,
   .close,
   .nav-tabs .nav-link.active,
-  .nav-tabs .nav-item.show .nav-link {
+  .nav-tabs .nav-item.show .nav-link,
+  .courseindex .courseindex-item:hover .courseindex-link,
+  .courseindex .courseindex-item:hover .courseindex-chevron,
+  .courseindex .courseindex-item:focus .courseindex-link,
+  .courseindex .courseindex-item:focus .courseindex-chevron,
+  .yui3-button,
+  .page-link:hover {
     color: $dark-link-color;
+  }
+
+  .fp-thumbnail {
+    background-color: $gray-600;
   }
 
   body,
   .card,
   .activity-add,
-  .block-add {
+  .block-add,
+  .btn.btn-icon:hover,
+  .btn.btn-icon:focus,
+  .path-mod .activity-header:not(:empty),
+  .generaltable thead .sticky-column,
+  .generaltable tbody tr:nth-of-type(2n),
+  .page-link,
+  .path-mod-assign .gradingtable tr.unselectedrow td {
     background-color: $dark-bg-color;
   }
 
@@ -59,7 +77,10 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .block .block-cards .btn.btn-link.btn-icon:hover,
   .block .block-cards .btn.btn-link.btn-icon:focus,
   .message-app,
-  .list-group-item {
+  .list-group-item,
+  .moodle-dialogue-base .moodle-dialogue-wrap,
+  .page-link:hover,
+  .bg-light {
     background-color: $dark-box-bg-color !important;
   }
 
@@ -72,7 +93,28 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .modal-header,
   .modal-footer,
   .mform fieldset,
-  .form-control {
+  .form-control,
+  .activity-item:not(.activityinline),
+  .course-section,
+  .generaltable th,
+  .generaltable td,
+  .table-bordered th,
+  .table-bordered td,
+  .path-mod .activity-information .activity-dates,
+  .fp-navbar,
+  .filepicker-filelist,
+  .filemanager-container,
+  .fp-iconview .fp-thumbnail,
+  .fp-iconview .fp-thumbnail img,
+  .moodle-dialogue-base .moodle-dialogue-wrap,
+  .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd,
+  .card,
+  .page-link,
+  .page-link:hover,
+  .custom-select,
+  .table th,
+  .table td,
+  .table thead th {
     border-color: $gray-800;
   }
 
@@ -87,7 +129,8 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
 
   .drawer,
   .form-control,
-  .custom-select {
+  .custom-select,
+  textarea {
     background-color: $gray-900;
   }
 
@@ -97,7 +140,8 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   }
 
   .block_myoverview,
-  .dashboard-card-footer {
+  .dashboard-card-footer,
+  .fp-iconview .fp-filename-field .fp-filename {
     background-color: transparent !important;
   }
 
@@ -113,5 +157,17 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .breadcrumb-item.active,
   .breadcrumb-item a:hover {
     color: $white;
+  }
+
+  @keyframes bg-pulse-grey {
+    0% {
+        background-color: $gray-700;
+    }
+    50% {
+        background-color: darken($gray-700, 5%);
+    }
+    100% {
+        background-color: $gray-700;
+    }
   }
 }

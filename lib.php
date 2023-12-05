@@ -101,7 +101,21 @@ function theme_liquid_get_pre_scss($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_almond_get_extra_scss($theme) {
+function theme_liquid_get_extra_scss($theme) {
   $content = '';
   return !empty($theme->settings->scss) ? $theme->settings->scss . ' ' . $content : $content;
+}
+
+/**
+ * Set HTML attributes for dark mode.
+ *
+ * @return array An associative array of HTML attributes.
+ */
+function theme_liquid_add_htmlattributes() {
+    $darkThemeCookie = isset($_COOKIE['darkThemeEnabled']) ? $_COOKIE['darkThemeEnabled'] : null;
+    $theme = ($darkThemeCookie === '1') ? 'dark' : 'light';
+
+    return array(
+        'data-bs-theme' => $theme,
+    );
 }

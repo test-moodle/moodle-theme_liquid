@@ -23,19 +23,19 @@
 export const init = () => {
   const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
 
-  if (darkThemeMq.matches && localStorage.getItem("darkThemeEnabled") === null) {
-    localStorage.setItem("darkThemeEnabled", "1");
+  if (darkThemeMq.matches && getCookie("darkThemeEnabled") === null) {
+    setCookie("darkThemeEnabled", "1");
   }
 
   const darkThemeToggle = document.getElementById("darktheme-checkbox");
-  const storedDarkThemeSetting = localStorage.getItem("darkThemeEnabled");
+  const storedDarkThemeSetting = getCookie("darkThemeEnabled");
 
   const setTheme = (theme) => {
     document.documentElement.setAttribute('data-bs-theme', theme);
   };
 
   if (storedDarkThemeSetting === null) {
-    localStorage.setItem("darkThemeEnabled", "0");
+    setCookie("darkThemeEnabled", "0");
     darkThemeToggle.checked = false;
     setTheme('light');
   } else {
@@ -47,6 +47,29 @@ export const init = () => {
     const isDarkThemeEnabled = e.target.checked;
 
     setTheme(isDarkThemeEnabled ? 'dark' : 'light');
-    localStorage.setItem("darkThemeEnabled", isDarkThemeEnabled ? "1" : "0");
+    setCookie("darkThemeEnabled", isDarkThemeEnabled ? "1" : "0");
   });
+
+  /**
+   * Retrieves the value of a cookie by name.
+   * @param {string} name - The name of the cookie.
+   * @returns {string|null} - The value of the cookie or null if not found.
+   */
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) {
+      return parts.pop().split(';').shift();
+    }
+    return null;
+  }
+
+  /**
+   * Sets a cookie with the given name and value.
+   * @param {string} name - The name of the cookie.
+   * @param {string} value - The value to set for the cookie.
+   */
+  function setCookie(name, value) {
+    document.cookie = `${name}=${value}; path=/`;
+  }
 };
