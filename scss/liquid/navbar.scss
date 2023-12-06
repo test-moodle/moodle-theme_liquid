@@ -126,7 +126,7 @@
     &.light {
       margin-right: .5rem;
 
-      [data-theme="light"] & {
+      [data-bs-theme="light"] & {
         color: $primary;
       }
     }
@@ -134,7 +134,7 @@
     &.dark {
       margin-left: 0;
 
-      [data-theme="dark"] & {
+      [data-bs-theme="dark"] & {
         color: $secondary;
       }
     }

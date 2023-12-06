@@ -27,7 +27,9 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .navbar.fixed-top .nav-tabs .nav-link.active,
   .block .block-cards span.categoryname,
   .block .block-cards .btn-link,
-  .dropdown-menu {
+  .dropdown-menu,
+  .form-control,
+  .custom-select {
     color: $dark-text-color;
   }
 
@@ -45,7 +47,9 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .courseindex .courseindex-item:focus .courseindex-link,
   .courseindex .courseindex-item:focus .courseindex-chevron,
   .yui3-button,
-  .page-link:hover {
+  .page-link:hover,
+  .activity-add,
+  .block-add {
     color: $dark-link-color;
   }
 
@@ -63,7 +67,21 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .generaltable thead .sticky-column,
   .generaltable tbody tr:nth-of-type(2n),
   .page-link,
-  .path-mod-assign .gradingtable tr.unselectedrow td {
+  .path-mod-assign .gradingtable tr.unselectedrow td,
+  .loginform,
+  .pagelayout-login#page-login-forgot_password .mform,
+  .path-mod-chat .yui-layout-unit-right,
+  &.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax #chat-messages .chat-message.course-theme,
+  #chat-userlist,
+  .editing .activity-item:hover,
+  .editing .activity-item.selected,
+  #page-mod-quiz-edit ul.slots li.section .content,
+  .jschooser .choosercontainer #chooseform .instruction,
+  .jschooser .choosercontainer #chooseform .typesummary,
+  .choosercontainer #chooseform .selected,
+  body#page-question-type-multichoice div[id^="fitem_id_"][id*="fraction_"],
+  body#page-question-type-multichoice div[id^="fitem_id_"][id*="feedback_"],
+  body#page-question-type-multichoice div[id^="fitem_id_"][id*="answer_"] {
     background-color: $dark-bg-color;
   }
 
@@ -80,7 +98,11 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .list-group-item,
   .moodle-dialogue-base .moodle-dialogue-wrap,
   .page-link:hover,
-  .bg-light {
+  .bg-light,
+  &.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax,
+  &.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax .yui-layout-unit.yui-layout-unit-center div.yui-layout-bd,
+  .mdl-chat-my-entry .chat-message .text,
+  .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
     background-color: $dark-box-bg-color !important;
   }
 
@@ -114,8 +136,13 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .custom-select,
   .table th,
   .table td,
-  .table thead th {
-    border-color: $gray-800;
+  .table thead th,
+  .border,
+  .border-top,
+  body#page-question-type-multichoice div[id^="fitem_id_"][id*="fraction_"],
+  body#page-question-type-multichoice div[id^="fitem_id_"][id*="feedback_"],
+  body#page-question-type-multichoice div[id^="fitem_id_"][id*="answer_"] {
+    border-color: $gray-800 !important;
   }
 
   .nav-tabs .nav-link.active,
@@ -123,15 +150,29 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
     border-color: $dark-link-color;
   }
 
-  .navbar.fixed-left {
+  .navbar.fixed-left,
+  .path-mod-chat .yui-layout-unit-bottom,
+  #chat-input-area,
+  #chat-input-area table.generaltable,
+  #chat-input-area table.generaltable td.cell,
+  #page-mod-quiz-edit ul.slots li.section li.activity,
+  #page-mod-quiz-edit .section .activity .actions,
+  #page-mod-quiz-edit ul.slots li.section li.activity .instancemaxmarkcontainer {
     background-color: #101216;
   }
 
   .drawer,
   .form-control,
   .custom-select,
-  textarea {
+  textarea,
+  #input-message,
+  .bg-primary-light,
+  .action-menu .dropdown-subpanel.content-displayed {
     background-color: $gray-900;
+  }
+
+  .moodle-dialogue-base .moodle-dialogue-lightbox {
+    background-color: $black;
   }
 
   .dropdown-menu,
@@ -149,8 +190,17 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
     border-color: rgba($white, .1);
   }
 
-  .navbar.fixed-top .usermenu .dropdown-menu .submenu .header .icon {
+  .navbar.fixed-top .usermenu .dropdown-menu .submenu .header .icon,
+  img.icon,
+  .fp-pathbar .fp-path-folder,
+  .fp-pathbar .fp-path-folder-name,
+  &.yui-skin-sam .yui-layout-unit .yui-resize-handle-r .yui-layout-resize-knob,
+  &.yui-skin-sam .yui-layout-unit .yui-resize-handle-l .yui-layout-resize-knob {
     filter: invert(1);
+  }
+
+  .tox-tinymce {
+    filter: grayscale(100%) invert(95%);
   }
 
   .breadcrumb-item:last-child,
