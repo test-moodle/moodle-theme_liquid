@@ -29,7 +29,8 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .block .block-cards .btn-link,
   .dropdown-menu,
   .form-control,
-  .custom-select {
+  .custom-select,
+  .btn {
     color: $dark-text-color;
   }
 
@@ -51,6 +52,10 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .activity-add,
   .block-add {
     color: $dark-link-color;
+  }
+
+  .btn.text-primary {
+    color: $dark-link-color !important;
   }
 
   .fp-thumbnail {
@@ -81,7 +86,8 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .choosercontainer #chooseform .selected,
   body#page-question-type-multichoice div[id^="fitem_id_"][id*="fraction_"],
   body#page-question-type-multichoice div[id^="fitem_id_"][id*="feedback_"],
-  body#page-question-type-multichoice div[id^="fitem_id_"][id*="answer_"] {
+  body#page-question-type-multichoice div[id^="fitem_id_"][id*="answer_"],
+  .path-mod-assign [data-region="grade-panel"] {
     background-color: $dark-bg-color;
   }
 
@@ -141,7 +147,10 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .border-top,
   body#page-question-type-multichoice div[id^="fitem_id_"][id*="fraction_"],
   body#page-question-type-multichoice div[id^="fitem_id_"][id*="feedback_"],
-  body#page-question-type-multichoice div[id^="fitem_id_"][id*="answer_"] {
+  body#page-question-type-multichoice div[id^="fitem_id_"][id*="answer_"],
+  .popover-region-container,
+  .popover-region-footer-container,
+  .popover-region-header-container {
     border-color: $gray-800 !important;
   }
 
@@ -157,7 +166,9 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   #chat-input-area table.generaltable td.cell,
   #page-mod-quiz-edit ul.slots li.section li.activity,
   #page-mod-quiz-edit .section .activity .actions,
-  #page-mod-quiz-edit ul.slots li.section li.activity .instancemaxmarkcontainer {
+  #page-mod-quiz-edit ul.slots li.section li.activity .instancemaxmarkcontainer,
+  .popover-region-container,
+  .popover-region-footer-container {
     background-color: #101216;
   }
 
@@ -190,6 +201,14 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
     border-color: rgba($white, .1);
   }
 
+  .popover-region-toggle::before {
+    border-bottom-color: $gray-800;
+  }
+
+  .popover-region-toggle::after {
+    border-bottom-color: #101216;
+  }
+
   .navbar.fixed-top .usermenu .dropdown-menu .submenu .header .icon,
   img.icon,
   .fp-pathbar .fp-path-folder,
@@ -205,7 +224,8 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
 
   .breadcrumb-item:last-child,
   .breadcrumb-item.active,
-  .breadcrumb-item a:hover {
+  .breadcrumb-item a:hover,
+  .btn-link:hover {
     color: $white;
   }
 
