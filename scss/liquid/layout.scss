@@ -80,6 +80,10 @@
     @include media-breakpoint-up(xlg) {
       margin-top: $navbar-height;
     }
+
+    .no-left-nav & {
+      margin-top: #{$navbar-height * 2};
+    }
   }
 
   ~ .drawer-left,
@@ -90,6 +94,11 @@
     @include media-breakpoint-up(xlg) {
       top: $navbar-height;
       height: calc(100vh - #{$navbar-height});
+    }
+
+    .no-left-nav & {
+      top: #{$navbar-height * 2};
+      height: calc(100vh - #{$navbar-height * 2});
     }
   }
 }

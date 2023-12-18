@@ -55,6 +55,7 @@
         ]
     }
 }}
+{{#leftnavigation}}
 <nav class="navbar fixed-left d-none d-xlg-flex p-0" aria-label="{{#str}}sitemenubar, admin{{/str}}">
     <a href="{{{ config.homeurl }}}" class="navbar-brand m-0 d-flex text-center w-100">
         {{# output.should_display_navbar_logo }}
@@ -72,6 +73,8 @@
 
     {{{ output.edit_switch }}}
 </nav>
+{{/leftnavigation}}
+
 <nav class="navbar fixed-top bg-white navbar-expand">
     <button class="navbar-toggler aabtn d-block d-xlg-none p-0 mr-3 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
         <span class="navbar-toggler-icon"></span>
@@ -80,15 +83,30 @@
 
     <a href="{{{ config.homeurl }}}" class="navbar-brand m-0 p-0 d-flex align-items-center d-xlg-none">
         {{# output.should_display_navbar_logo }}
-            <img src="{{output.get_compact_logo_url}}" class="logo" alt="{{sitename}}">
+            {{#leftnavigation}}
+                <img src="{{output.get_compact_logo_url}}" class="logo" alt="{{sitename}}">
+            {{/leftnavigation}}
+            {{^leftnavigation}}
+                <img src="{{output.get_logo_url}}" class="logo m-auto" alt="{{sitename}}">
+            {{/leftnavigation}}
         {{/ output.should_display_navbar_logo }}
         {{^ output.should_display_navbar_logo }}
             <span class="m-auto">{{{ sitename }}}</span>
         {{/ output.should_display_navbar_logo }}
     </a>
 
+    {{^leftnavigation}}
+        {{#primarymoremenu}}
+            <div class="main-navbar d-none d-xlg-flex p-0" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+                {{> core/moremenu}}
+            </div>
+        {{/primarymoremenu}}
+    {{/leftnavigation}}
+
     {{#secondarymoremenu}}
-        {{> core/moremenu}}
+        <div class="secondary-navbar">
+            {{> core/moremenu}}
+        </div>
     {{/secondarymoremenu}}
 
     <ul class="navbar-nav d-none d-md-flex my-1 px-1">

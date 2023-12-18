@@ -25,12 +25,15 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-if ($ADMIN->fulltree) {
-  $settings = new theme_boost_admin_settingspage_tabs('themesettingliquid', get_string('configtitle', 'theme_liquid'));
-  
-  require('settings/colors.php');
-  require('settings/typography.php');
-  require('settings/borders.php');
-  require('settings/additional.php');
-  require('settings/advanced.php');
-}
+$page = new admin_settingpage('theme_liquid_additional', get_string('additionalsettings', 'theme_liquid'));
+
+// Left navigation.
+$name = 'theme_liquid/leftnavigation';
+$title = get_string('leftnavigation', 'theme_liquid');
+$default = 1;
+
+$setting = new admin_setting_configcheckbox($name, $title, '', $default);
+$setting->set_updatedcallback('theme_reset_all_caches');
+$page->add($setting);
+
+$settings->add($page);

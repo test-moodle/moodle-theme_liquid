@@ -1,0 +1,13 @@
+.dashboard-card-deck:not(.fixed-width-cards) {
+  @media (min-width: 1480px) {
+    .dashboard-card {
+        width: calc(25% - #{$card-gutter});
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .dashboard-card {
+        width: calc(20% - #{$card-gutter});
+    }
+  }
+}

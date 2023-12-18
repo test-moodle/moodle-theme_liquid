@@ -1,11 +1,15 @@
 .navbar {
-  &.fixed-top {
+  .secondary-navbar {
     height: $navbar-height;
     border-bottom: 0;
     padding: 0 .5rem;
 
     @include media-breakpoint-up(xlg) {
       left: $navbar-width;
+    }
+
+    .no-left-nav & {
+      left: 0;
     }
 
     nav {
@@ -21,6 +25,14 @@
         left: auto;
         width: auto;
         background: none;
+
+        .no-left-nav & {
+          position: fixed;
+          top: $navbar-height;
+          left: 0;
+          width: 100%;
+          background-color: $primary;
+        }
       }
     }
 
@@ -43,6 +55,10 @@
           color: $gray-700;
         }
 
+        .no-left-nav & {
+          color: rgba($text-on-primary, .7);
+        }
+
         &:hover,
         &:focus,
         &.active {
@@ -51,6 +67,10 @@
           @include media-breakpoint-up(xlg) {
             color: $primary;
           }
+
+          .no-left-nav & {
+            color: $text-on-primary;
+          }
         }
       }
     }
@@ -58,6 +78,28 @@
     .editmode-switch-form {
       @include media-breakpoint-up(xlg) {
         display: none !important;
+      }
+
+      .no-left-nav & {
+        display: flex !important;
+      }
+    }
+  }
+
+  .main-navbar {
+    height: $navbar-height;
+    margin-left: 2rem;
+    padding: 0 .5rem;
+
+    .nav-link {
+      height: $navbar-height;
+      padding: 1rem;
+      color: $gray-700;
+
+      &:hover,
+      &:focus,
+      &.active {
+        color: $primary;
       }
     }
   }
@@ -91,6 +133,10 @@
       height: 40px;
       max-height: 100%;
     }
+
+    .no-left-nav & {
+      display: flex !important;
+    }
   }
 
   .primary-navigation {
@@ -111,6 +157,10 @@
 
   @include media-breakpoint-up(xlg) {
     margin-left: $navbar-width;
+  }
+
+  .no-left-nav & {
+    margin-left: 0;
   }
 }
 

@@ -57,3 +57,5 @@ $string['borderwidth'] = 'Border width';
 $string['roundedbase'] = 'Rounded base';
 $string['roundedsm'] = 'Rounded SM';
 $string['roundedlg'] = 'Rounded LG';
+$string['additionalsettings'] = 'Additional settings';
+$string['leftnavigation'] = 'Display navigation on left';
