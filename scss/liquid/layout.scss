@@ -7,11 +7,19 @@
       background-color: $secondary;
       color: $white;
     }
+
+    .no-left-nav & {
+      top: calc(#{$navbar-height * 2} + 0.7rem);
+    }
   }
 
   .drawer-left-toggle {
     @include media-breakpoint-up(xlg) {
       left: $navbar-width;
+
+      .no-left-nav & {
+        left: 0;
+      }
     }
 
     .btn {
@@ -46,6 +54,10 @@
     &.show-drawer-left {
       @include media-breakpoint-up(xlg) {
         margin-left: calc(#{$navbar-width} + #{$drawer-left-width});
+
+        .no-left-nav & {
+          margin-left: $drawer-left-width;
+        }
       }
 
       @include media-breakpoint-up(xl) {
@@ -94,11 +106,18 @@
     @include media-breakpoint-up(xlg) {
       top: $navbar-height;
       height: calc(100vh - #{$navbar-height});
+
+      .no-left-nav & {
+        top: #{$navbar-height * 2};
+        height: calc(100vh - #{$navbar-height * 2});
+      }
     }
 
-    .no-left-nav & {
-      top: #{$navbar-height * 2};
-      height: calc(100vh - #{$navbar-height * 2});
+    &.drawer-primary {
+      .no-left-nav & {
+        top: 0;
+        height: 100dvh;
+      }
     }
   }
 }

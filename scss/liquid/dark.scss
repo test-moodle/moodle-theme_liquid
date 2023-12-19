@@ -22,9 +22,7 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .h6,
   .navbar-nav .popover-region > * > .icon,
   .navbar .secondary-navbar .nav-tabs .nav-link,
-  .navbar .secondary-navbar .nav-tabs .nav-link:hover,
-  .navbar .secondary-navbar .nav-tabs .nav-link:focus,
-  .navbar .secondary-navbar .nav-tabs .nav-link.active,
+  .navbar .main-navbar .nav-link,
   .block .block-cards span.categoryname,
   .block .block-cards .btn-link,
   .dropdown-menu,
@@ -50,7 +48,13 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .yui3-button,
   .page-link:hover,
   .activity-add,
-  .block-add {
+  .block-add,
+  .navbar .secondary-navbar .nav-tabs .nav-link:hover,
+  .navbar .secondary-navbar .nav-tabs .nav-link:focus,
+  .navbar .secondary-navbar .nav-tabs .nav-link.active,
+  .navbar .main-navbar .nav-link:hover,
+  .navbar .main-navbar .nav-link:focus,
+  .navbar .main-navbar .nav-link.active {
     color: $dark-link-color;
   }
 
@@ -169,7 +173,8 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   #page-mod-quiz-edit .section .activity .actions,
   #page-mod-quiz-edit ul.slots li.section li.activity .instancemaxmarkcontainer,
   .popover-region-container,
-  .popover-region-footer-container {
+  .popover-region-footer-container,
+  .no-left-nav .navbar .secondary-navbar nav {
     background-color: #101216;
   }
 
@@ -232,6 +237,18 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
 
   .navbar .navbar-toggler-icon {
     background-image: $navbar-dark-toggler-icon-bg;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .nav-tabs:not(.more-nav),
+    .nav-pills {
+      .nav-link {
+        &.active {
+          border-color: $white !important;
+          color: $white !important;
+        }
+      }
+    }
   }
 
   @keyframes bg-pulse-grey {

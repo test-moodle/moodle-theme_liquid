@@ -21,3 +21,30 @@ a:not([class]),
         text-decoration: underline;
     }
 }
+
+.header-actions-container {
+  .mform {
+    padding: 0;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .nav-tabs:not(.more-nav),
+  .nav-pills {
+    background-color: transparent;
+
+    .nav-link {
+      background: transparent;
+      border: 1px;
+
+      &.active {
+        @include button-outline-variant($primary);
+        background-color: transparent !important;
+        border-color: $primary !important;
+        border-width: 1px;
+        border-style: solid;
+        color: $primary !important;
+      }
+    }
+  }
+}

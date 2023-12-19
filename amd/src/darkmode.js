@@ -22,33 +22,46 @@
 
 export const init = () => {
   const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-
-  if (darkThemeMq.matches && getCookie("darkThemeEnabled") === null) {
-    setCookie("darkThemeEnabled", "1");
-  }
-
-  const darkThemeToggle = document.getElementById("darktheme-checkbox");
-  const storedDarkThemeSetting = getCookie("darkThemeEnabled");
+  const darkThemeToggle = document.querySelectorAll(".darktheme-checkbox");
 
   const setTheme = (theme) => {
     document.documentElement.setAttribute('data-bs-theme', theme);
   };
 
-  if (storedDarkThemeSetting === null) {
-    setCookie("darkThemeEnabled", "0");
-    darkThemeToggle.checked = false;
-    setTheme('light');
-  } else {
-    darkThemeToggle.checked = storedDarkThemeSetting === "1";
-    setTheme(darkThemeToggle.checked ? 'dark' : 'light');
-  }
+  const updateCheckboxes = (checked) => {
+    darkThemeToggle.forEach(checkbox => {
+      checkbox.checked = checked;
+    });
+  };
 
-  darkThemeToggle.addEventListener("change", (e) => {
+  const initializeTheme = () => {
+    const storedDarkThemeSetting = getCookie("darkThemeEnabled");
+
+    if (storedDarkThemeSetting === null) {
+      setCookie("darkThemeEnabled", darkThemeMq.matches ? "1" : "0");
+      updateCheckboxes(darkThemeMq.matches);
+      setTheme(darkThemeMq.matches ? 'dark' : 'light');
+    } else {
+      const isDarkTheme = storedDarkThemeSetting === "1";
+      updateCheckboxes(isDarkTheme);
+      setTheme(isDarkTheme ? 'dark' : 'light');
+    }
+  };
+
+  const handleCheckboxChange = (e) => {
     const isDarkThemeEnabled = e.target.checked;
 
     setTheme(isDarkThemeEnabled ? 'dark' : 'light');
     setCookie("darkThemeEnabled", isDarkThemeEnabled ? "1" : "0");
+    updateCheckboxes(isDarkThemeEnabled);
+  };
+
+  // Add event listener to each checkbox
+  darkThemeToggle.forEach(checkbox => {
+    checkbox.addEventListener("change", handleCheckboxChange);
   });
+
+  initializeTheme();
 
   /**
    * Retrieves the value of a cookie by name.

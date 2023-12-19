@@ -1,4 +1,8 @@
 .navbar {
+  &.fixed-top {
+    border-bottom: 0;
+  }
+
   .secondary-navbar {
     height: $navbar-height;
     border-bottom: 0;
@@ -17,6 +21,7 @@
       top: $navbar-height;
       left: 0;
       width: 100%;
+      height: $navbar-height;
       background-color: $primary;
 
       @include media-breakpoint-up(xlg) {
@@ -194,5 +199,20 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+  }
+}
+
+[data-bs-theme="dark"] {
+  .toggle-holder .custom-switch .custom-control-label {
+    &::before {
+      color: $white;
+      border-color: $secondary;
+      background-color: $secondary;
+    }
+
+    &::after {
+      background-color: $white;
+      transform: translateX(.75rem);
+    }
   }
 }

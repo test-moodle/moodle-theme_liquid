@@ -87,7 +87,8 @@
                 <img src="{{output.get_compact_logo_url}}" class="logo" alt="{{sitename}}">
             {{/leftnavigation}}
             {{^leftnavigation}}
-                <img src="{{output.get_logo_url}}" class="logo m-auto" alt="{{sitename}}">
+                <img src="{{output.get_logo_url}}" class="logo m-auto d-none d-sm-block" alt="{{sitename}}">
+                <img src="{{output.get_compact_logo_url}}" class="logo m-auto d-sm-none" alt="{{sitename}}">
             {{/leftnavigation}}
         {{/ output.should_display_navbar_logo }}
         {{^ output.should_display_navbar_logo }}
@@ -114,20 +115,20 @@
         {{{ output.page_heading_menu }}}
     </ul>
 
-    <div class="toggle-holder ml-auto mr-3">
-        <label class="light" for="darktheme-checkbox">
+    <div class="toggle-holder ml-auto mr-3 d-none d-xlg-flex">
+        <label class="light" for="darktheme-checkbox-top">
             <i class="fa fa-sun-o"></i>
         </label>
         <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input darktheme-checkbox" id="darktheme-checkbox">
+            <input type="checkbox" class="custom-control-input darktheme-checkbox" id="darktheme-checkbox-top">
             <span class="custom-control-label"></span>
         </div>
-        <label class="dark" for="darktheme-checkbox">
+        <label class="dark" for="darktheme-checkbox-top">
             <i class="fa fa-moon-o"></i>
         </label>
     </div>
 
-    <div id="usernavigation" class="navbar-nav">
+    <div id="usernavigation" class="navbar-nav ml-auto ml-xlg-0">
         {{# output.search_box }}
             {{{ output.search_box }}}
             <div class="divider border-left h-75 align-self-center mx-1"></div>
@@ -147,10 +148,3 @@
 </nav>
 {{#secondarymoremenu}}<div class="secondary-nav-helper"></div>{{/secondarymoremenu}}
 {{> theme_boost/primary-drawer-mobile }}
-
-{{#js}}
-require(['theme_liquid/darkmode'], function(toggleDarkTheme) {
-    toggleDarkTheme.init({
-    });
-});
-{{/js}}
