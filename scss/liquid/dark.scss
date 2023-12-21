@@ -123,6 +123,8 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   #frontpage-course-list .coursebox,
   .course-search-result .coursebox,
   .border-bottom,
+  .border-left,
+  .border-right,
   .modal-header,
   .modal-footer,
   .mform fieldset,
@@ -162,6 +164,10 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
     border-color: $dark-link-color;
+  }
+
+  .navbar.fixed-top .divider {
+    background-color: $gray-800;
   }
 
   .navbar.fixed-left,

@@ -68,6 +68,10 @@
     &.show-drawer-right {
       @include media-breakpoint-up(xlg) {
         margin-left: $navbar-width;
+
+        .no-left-nav & {
+          margin-left: 0;
+        }
       }
 
       @include media-breakpoint-up(xl) {
