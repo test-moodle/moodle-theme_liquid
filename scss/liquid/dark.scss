@@ -257,15 +257,19 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
     }
   }
 
-  @keyframes bg-pulse-grey {
-    0% {
-        background-color: $gray-700;
-    }
-    50% {
-        background-color: darken($gray-700, 5%);
-    }
-    100% {
-        background-color: $gray-700;
-    }
+  .bg-pulse-grey {
+    animation: bg-pulse-grey-dark 2s infinite linear;
+  }
+}
+
+@keyframes bg-pulse-grey-dark {
+  0% {
+      background-color: $gray-700;
+  }
+  50% {
+      background-color: darken($gray-700, 5%);
+  }
+  100% {
+      background-color: $gray-700;
   }
 }

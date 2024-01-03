@@ -9,6 +9,16 @@
         left: 0;
       }
     }
+
+    .editmode-switch-form {
+      @include media-breakpoint-up(xlg) {
+        display: none !important;
+      }
+
+      .no-left-nav & {
+        display: flex !important;
+      }
+    }
   }
 
   .secondary-navbar {
@@ -77,16 +87,6 @@
             color: $text-on-primary;
           }
         }
-      }
-    }
-
-    .editmode-switch-form {
-      @include media-breakpoint-up(xlg) {
-        display: none !important;
-      }
-
-      .no-left-nav & {
-        display: flex !important;
       }
     }
   }
