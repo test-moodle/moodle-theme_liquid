@@ -21,12 +21,17 @@
         grid-column: 1;
         grid-row: 1;
       }
+
+      .nav-search {
+        flex: 1 1 auto;
+      }
     }
 
     &.block_calendar_month {
       @include media-breakpoint-up(lg) {
         grid-column: 2;
         grid-row: 1;
+        min-width: 22rem;
       }
 
       .footer {
@@ -50,6 +55,21 @@
   .controls {
     width: 100%;
     margin: 1rem 0 1.25rem;
+
+    .calendar-controls {
+      display: flex;
+      align-items: center;
+
+      .arrow_link {
+        min-width: 7rem;
+        flex: 0 0 auto;
+      }
+
+      .current {
+        margin: 0;
+        flex: 1 1 auto;
+      }
+    }
   }
 
   .calendarmonth {
@@ -74,13 +94,10 @@
 
     td {
       .day-number-circle {
-        width: 2rem;
-        height: 2rem;
-
-        @include media-breakpoint-up(sm) {
-          width: 2.875rem;
-          height: 2.875rem;
-        }
+        width: 100%;
+        height: auto;
+        max-width: 2.125rem;
+        aspect-ratio: 1 / 1;
       }
 
       &:hover,

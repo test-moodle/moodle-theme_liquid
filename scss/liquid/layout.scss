@@ -74,6 +74,14 @@
     }
 
     &.show-drawer-right {
+      margin-right: 0;
+
+      .no-left-nav & {
+        @include media-breakpoint-up(lg) {
+          margin-right: $drawer-right-width;
+        }
+      }
+
       @include media-breakpoint-up(xlg) {
         margin-left: $navbar-width;
 
@@ -83,6 +91,7 @@
       }
 
       @include media-breakpoint-up(xl) {
+        margin-right: $drawer-right-width;
         padding-right: 1.5rem;
       }
     }
