@@ -177,6 +177,7 @@
   label {
     margin: 0;
     font-size: 1rem;
+    cursor: pointer;
 
     &.light {
       margin-right: .5rem;
@@ -195,9 +196,14 @@
     }
   }
 
+  .custom-switch {
+    cursor: pointer;
+  }
+
   .custom-control-input {
     width: 100%;
     height: 100%;
+    cursor: pointer;
     z-index: 1;
   }
 }
