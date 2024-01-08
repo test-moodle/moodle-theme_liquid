@@ -21,3 +21,13 @@
     margin: 0;
   }
 }
+
+select.form-control[size],
+select.form-control[multiple] {
+  padding-right: 1.5rem;
+}
+
+.form-item .form-setting .form-defaultinfo {
+  width: 100%;
+  margin-top: .25rem;
+}

@@ -1,3 +1,13 @@
+#page-wrapper #page-footer {
+  padding-left: .5rem;
+  padding-right: .5rem;
+
+  @include media-breakpoint-up(sm) {
+    padding-left: calc(.5rem + 15px);
+    padding-right: calc(.5rem + 15px);
+  }
+}
+
 @include media-breakpoint-up(sm) {
   .jsenabled #page-footer .footer-content-popover {
       display: block;
