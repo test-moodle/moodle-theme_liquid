@@ -31,6 +31,7 @@ if ($ADMIN->fulltree) {
   require('settings/colors.php');
   require('settings/typography.php');
   require('settings/borders.php');
+  require('settings/frontpageslider.php');
   require('settings/additional.php');
   require('settings/advanced.php');
 }

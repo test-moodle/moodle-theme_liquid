@@ -31,7 +31,6 @@ $page = new admin_settingpage('theme_liquid_additional', get_string('additionals
 $name = 'theme_liquid/leftnavigation';
 $title = get_string('leftnavigation', 'theme_liquid');
 $default = 1;
-
 $setting = new admin_setting_configcheckbox($name, $title, '', $default);
 $setting->set_updatedcallback('theme_reset_all_caches');
 $page->add($setting);

@@ -1,0 +1,83 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_liquid/slider
+
+    Front page slider.
+}}
+<div id="topofscroll">
+    <div class="frontpage-slider">
+        <div class="swiper" data-swiper-options='{
+        "spaceBetween": 0,
+        "pagination": {
+            "el": ".swiper-pagination",
+            "type":  "progressbar"
+        },
+        "navigation": {
+            "prevEl": ".btn-prev",
+            "nextEl": ".btn-next"
+        }
+        }'>
+            <div class="swiper-wrapper">
+                {{#slides}}
+                    {{#slidestatus}}
+                        <div class="swiper-slide">
+                            {{#slidelink}}
+                                <a href="{{{slidelink}}}" class="ratio ratio-16x9">
+                                    {{#slideimage}}
+                                        <div class="image-wrapper">
+                                            <img src="{{{slideimage}}}">
+                                        </div>
+                                    {{/slideimage}}
+                                    {{#slidetext}}
+                                        <div class="content-wrapper">
+                                            {{{slidetext}}}
+                                        </div>
+                                    {{/slidetext}}
+                                </a>
+                            {{/slidelink}}
+                            {{^slidelink}}
+                                <div class="ratio ratio-16x9">
+                                    {{#slideimage}}
+                                        <div class="image-wrapper">
+                                            <img src="{{{slideimage}}}">
+                                        </div>
+                                    {{/slideimage}}
+                                    {{#slidetext}}
+                                        <div class="content-wrapper">
+                                            {{{slidetext}}}
+                                        </div>
+                                    {{/slidetext}}
+                                </div>
+                            {{/slidelink}}
+                        </div>
+                    {{/slidestatus}}
+                {{/slides}}
+            </div>
+
+            <button type="button" class="btn btn-prev btn-icon btn-sm btn-outline-primary rounded-circle" aria-label="Prev">
+                <i class="fa fa-chevron-left"></i>
+            </button>
+
+            <button type="button" class="btn btn-next btn-icon btn-sm btn-outline-primary rounded-circle" aria-label="Next">
+                <i class="fa fa-chevron-right"></i>
+            </button>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>

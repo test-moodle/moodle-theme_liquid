@@ -119,3 +119,71 @@ function theme_liquid_add_htmlattributes() {
         'data-bs-theme' => $theme,
     );
 }
+
+/**
+ * Return theme setting value.
+ * 
+ * @param string $setting
+ * @param mixed $format
+ * @param stdClass $CFG
+ * @param moodle_page $PAGE
+ * @return mixed
+ */
+function theme_liquid_setting($setting, $format = true) {
+    global $CFG, $PAGE;
+
+    require_once($CFG->dirroot . '/lib/weblib.php');
+    $theme = theme_config::load('liquid');
+
+    if (empty($theme->settings->$setting)) {
+        return false;
+    }
+
+    if ($format === false) {
+        return $theme->settings->$setting;
+    }
+
+    switch ($format) {
+        case 'format_text':
+            return format_text($theme->settings->$setting, FORMAT_PLAIN);
+
+        case 'format_html':
+            return format_text($theme->settings->$setting, FORMAT_HTML, ['trusted' => true, 'noclean' => true]);
+
+        case 'file':
+            return $PAGE->theme->setting_file_url($setting, $setting);
+
+        default:
+            return format_string($theme->settings->$setting);
+    }
+}
+
+/**
+ * Serve files form theme settings.
+ *
+ * @param stdClass $course
+ * @param stdClass $cm
+ * @param context $context
+ * @param string $filearea
+ * @param array $args
+ * @param bool $forcedownload
+ * @param array $options
+ * @return bool
+ */
+function theme_liquid_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = []) {
+    static $theme;
+
+    if (empty($theme)) {
+       
+        $theme = theme_config::load('liquid');
+    }
+    if ($context->contextlevel == CONTEXT_SYSTEM) {
+        if (preg_match("/slide[1-9][0-9]*image/", $filearea) !== false) {
+            return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
+        } else {
+            send_file_not_found();
+        }
+    } else {
+        send_file_not_found();
+    }
+}

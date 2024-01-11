@@ -28,7 +28,9 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .dropdown-menu,
   .form-control,
   .custom-select,
-  .btn {
+  .btn:not(.btn-outline-secondary):not(.btn-outline-primary),
+  .frontpage-slider .swiper-slide .ratio .content-wrapper,
+  .frontpage-slider .swiper-slide .ratio .content-wrapper :not(.btn) {
     color: $dark-text-color;
   }
 
@@ -180,7 +182,8 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   #page-mod-quiz-edit ul.slots li.section li.activity .instancemaxmarkcontainer,
   .popover-region-container,
   .popover-region-footer-container,
-  .no-left-nav .navbar .secondary-navbar nav {
+  .no-left-nav .navbar .secondary-navbar nav,
+  .swiper-slide .ratio {
     background-color: #101216;
   }
 
@@ -207,6 +210,10 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
   .dashboard-card-footer,
   .fp-iconview .fp-filename-field .fp-filename {
     background-color: transparent !important;
+  }
+
+  .frontpage-slider .swiper-slide .ratio .image-wrapper + .content-wrapper {
+    background-color: rgba($black, .5);
   }
 
   hr {
