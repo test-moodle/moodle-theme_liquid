@@ -146,6 +146,11 @@ $h4-font-size:                          $font-size-base * 1.5 !default;
 $h5-font-size:                          $font-size-base * 1.25 !default;
 $h6-font-size:                          $font-size-base !default;
 
+
+// Links variables.
+$link-color:                            $body-color !default;
+$link-hover-color:                      $primary !default;
+
 // Button variables.
 $btn-padding-y:                         .75rem !default;
 $btn-padding-x:                         1.5rem !default;
@@ -165,7 +170,7 @@ $dropdown-border-color:                 rgba($border-color, .7) !default;
 $dropdown-border-radius:                $border-radius-lg !default;
 $dropdown-box-shadow:                   $box-shadow !default;
 
-$dropdown-link-color:                   $primary !default;
+$dropdown-link-color:                   $body-color !default;
 $dropdown-link-hover-color:             $text-on-primary !default;
 $dropdown-link-hover-bg:                $primary !default;
 

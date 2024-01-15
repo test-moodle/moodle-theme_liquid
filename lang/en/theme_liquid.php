@@ -24,6 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die(); 
 
+$string['developedby'] = 'Developed by <a href="https://agiledrop.com">Agiledrop ltd.</a>';
 $string['pluginname'] = 'Liquid';
 $string['configtitle'] = 'Liquid';
 $string['advancedsettings'] = 'Advanced settings';
