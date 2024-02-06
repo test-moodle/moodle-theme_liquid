@@ -15,6 +15,10 @@
     &:hover {
       background-color: $primary;
     }
+
+    &:disabled:hover {
+      background-color: rgba($white, .5);
+    }
   }
 
   .btn-prev {

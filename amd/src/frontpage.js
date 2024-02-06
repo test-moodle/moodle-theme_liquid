@@ -12,7 +12,7 @@ define(['theme_liquid/swiper'], function(Swiper) {
   }
 
   return {
-    init: function () {
+    init: function() {
       initSwiper();
     }
   };

@@ -32,6 +32,14 @@ $THEME->usefallback = true;
 $THEME->scss = function($theme) {
     return theme_liquid_get_main_scss_content($theme);
 };
+$THEME->layouts = [
+    'frontpage' => array(
+        'file' => 'frontpage.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
+        'options' => array('nonavbar' => true),
+    ),
+];
 $THEME->parents = ['boost'];
 $THEME->enable_dock = false;
 $THEME->extrascsscallback = 'theme_liquid_get_extra_scss';

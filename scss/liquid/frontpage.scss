@@ -48,3 +48,13 @@
     }
   }
 }
+
+.pagelayout-frontpage #page.drawers div[role="main"] > br {
+  display: none;
+}
+
+.course-content ul.topics.frontpage {
+  li.section {
+    padding: 0;
+  }
+}
