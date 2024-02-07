@@ -19,65 +19,64 @@
 
     Front page slider.
 }}
-<div id="topofscroll">
-    <div class="frontpage-slider">
-        <div class="swiper" data-swiper-options='{
-        "spaceBetween": 0,
-        "pagination": {
-            "el": ".swiper-pagination",
-            "type":  "progressbar"
-        },
-        "navigation": {
-            "prevEl": ".btn-prev",
-            "nextEl": ".btn-next"
-        }
-        }'>
-            <div class="swiper-wrapper">
-                {{#slides}}
-                    {{#slidestatus}}
-                        <div class="swiper-slide">
-                            {{#slidelink}}
-                                <a href="{{{slidelink}}}" class="ratio ratio-16x9">
-                                    {{#slideimage}}
-                                        <div class="image-wrapper">
-                                            <img src="{{{slideimage}}}">
-                                        </div>
-                                    {{/slideimage}}
-                                    {{#slidetext}}
-                                        <div class="content-wrapper">
-                                            {{{slidetext}}}
-                                        </div>
-                                    {{/slidetext}}
-                                </a>
-                            {{/slidelink}}
-                            {{^slidelink}}
-                                <div class="ratio ratio-16x9">
-                                    {{#slideimage}}
-                                        <div class="image-wrapper">
-                                            <img src="{{{slideimage}}}">
-                                        </div>
-                                    {{/slideimage}}
-                                    {{#slidetext}}
-                                        <div class="content-wrapper">
-                                            {{{slidetext}}}
-                                        </div>
-                                    {{/slidetext}}
-                                </div>
-                            {{/slidelink}}
-                        </div>
-                    {{/slidestatus}}
-                {{/slides}}
-            </div>
 
-            <button type="button" class="btn btn-prev btn-icon btn-sm btn-outline-primary rounded-circle" aria-label="Prev">
-                <i class="fa fa-chevron-left"></i>
-            </button>
-
-            <button type="button" class="btn btn-next btn-icon btn-sm btn-outline-primary rounded-circle" aria-label="Next">
-                <i class="fa fa-chevron-right"></i>
-            </button>
-
-            <div class="swiper-pagination"></div>
+<div class="frontpage-slider">
+    <div class="swiper" data-swiper-options='{
+    "spaceBetween": 0,
+    "pagination": {
+        "el": ".swiper-pagination",
+        "type":  "progressbar"
+    },
+    "navigation": {
+        "prevEl": ".btn-prev",
+        "nextEl": ".btn-next"
+    }
+    }'>
+        <div class="swiper-wrapper">
+            {{#slides}}
+                {{#slidestatus}}
+                    <div class="swiper-slide">
+                        {{#slidelink}}
+                            <a href="{{{slidelink}}}" class="ratio ratio-16x9">
+                                {{#slideimage}}
+                                    <div class="image-wrapper">
+                                        <img src="{{{slideimage}}}">
+                                    </div>
+                                {{/slideimage}}
+                                {{#slidetext}}
+                                    <div class="content-wrapper">
+                                        {{{slidetext}}}
+                                    </div>
+                                {{/slidetext}}
+                            </a>
+                        {{/slidelink}}
+                        {{^slidelink}}
+                            <div class="ratio ratio-16x9">
+                                {{#slideimage}}
+                                    <div class="image-wrapper">
+                                        <img src="{{{slideimage}}}">
+                                    </div>
+                                {{/slideimage}}
+                                {{#slidetext}}
+                                    <div class="content-wrapper">
+                                        {{{slidetext}}}
+                                    </div>
+                                {{/slidetext}}
+                            </div>
+                        {{/slidelink}}
+                    </div>
+                {{/slidestatus}}
+            {{/slides}}
         </div>
+
+        <button type="button" class="btn btn-prev btn-icon btn-sm btn-outline-primary rounded-circle" aria-label="Prev">
+            <i class="fa fa-chevron-left"></i>
+        </button>
+
+        <button type="button" class="btn btn-next btn-icon btn-sm btn-outline-primary rounded-circle" aria-label="Next">
+            <i class="fa fa-chevron-right"></i>
+        </button>
+
+        <div class="swiper-pagination"></div>
     </div>
 </div>

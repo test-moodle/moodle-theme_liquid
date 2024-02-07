@@ -57,6 +57,7 @@
     {{{ output.standard_top_of_body_html }}}
     {{> theme_boost/navbar }}
     <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
+        <div id="topofscroll"></div>
         {{#showslider}}
           {{> theme_liquid/slider }}
         {{/showslider}}
@@ -69,6 +70,9 @@
                 </div>
             </div>
         </div>
+        {{#showfaq}}
+          {{> theme_liquid/faq }}
+        {{/showfaq}}
         {{> theme_boost/footer }}
     </div>
     {{{ output.standard_after_main_region_html }}}

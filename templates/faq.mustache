@@ -1,0 +1,49 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_liquid/slider
+
+    Front page slider.
+}}
+
+<div class="frontpage-faq row mb-5">
+    <div class="col-md-4 d-md-flex flex-column justify-content-center">
+        <h2 class="h1">{{{faqtitle}}}</h2>
+        <div class="pb-3 pb-sm-4">
+            {{{faqdescription}}}        
+        </div>
+    </div>
+    <div class="col-md-8 col-lg-7 offset-lg-1">
+        <div class="accordion" id="faq-frontpage">
+            {{#questions}}
+                <div class="accordion-item bg-white border-radius">
+                    <h3 class="accordion-header" id="faq-heading-{{{faqid}}}">
+                        <button class="accordion-button {{^isfirst}}collapsed{{/isfirst}}" type="button" data-toggle="collapse" data-target="#faq-content-{{{faqid}}}" aria-expanded="{{#isfirst}}true{{/isfirst}}{{^isfirst}}false{{/isfirst}}" aria-controls="faq-content-{{{faqid}}}">
+                            {{{faqquestion}}}
+                        </button>
+                    </h3>
+
+                    <div id="faq-content-{{{faqid}}}" class="accordion-collapse collapse {{#isfirst}}show{{/isfirst}}" aria-labelledby="faq-heading-{{{faqid}}}" data-parent="#faq-frontpage">
+                        <div class="accordion-body">
+                            {{{faqanswer}}}
+                        </div>
+                    </div>
+                </div>
+            {{/questions}}
+        </div>
+    </div>
+</div>
