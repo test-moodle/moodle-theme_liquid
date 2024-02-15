@@ -59,8 +59,20 @@
   }
 }
 
-.pagelayout-frontpage #page.drawers div[role="main"] > br {
-  display: none;
+.pagelayout-frontpage #page.drawers {
+  .main-inner {
+    margin-top: 0;
+  }
+
+  div[role="main"] {
+    > br {
+      display: none;
+    }
+
+    > div > h2 {
+      @extend .h1;
+    }
+  }
 }
 
 .course-content ul.topics.frontpage {
