@@ -122,10 +122,28 @@
     background-color: $primary;
     z-index: #{$zindex-fixed + 1};
 
-    .editmode-switch-form {
+    .social-icons {
       margin-top: auto;
       margin-bottom: 1rem;
-      padding: $primary-nav-padding-x $primary-nav-padding-y;
+      padding: $primary-nav-padding-x $primary-nav-padding-y 0;
+      gap: 1rem;
+      
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: $text-on-primary;
+        transition: opacity ease .3s;
+
+        &:hover,
+        &:focus {
+          opacity: .8;
+        }
+      }
+    }
+
+    .editmode-switch-form {
+      margin-bottom: 1rem;
+      padding: 0 $primary-nav-padding-x $primary-nav-padding-y;
       color: $text-on-primary;
     }
 
