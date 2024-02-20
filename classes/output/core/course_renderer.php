@@ -90,7 +90,7 @@ class course_renderer extends \core_course_renderer {
     // Image.
     $courseimage = \core_course\external\course_summary_exporter::get_course_image($course);
     if (!$courseimage) {
-      $courseimage = $OUTPUT->get_generated_url_for_course($coursecontext);
+        $courseimage = $OUTPUT->get_generated_image_for_id($course->id);
     }
 
     // Course data.
