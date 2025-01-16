@@ -56,10 +56,11 @@
 <div id="page-wrapper" class="d-print-block">
     {{{ output.standard_top_of_body_html }}}
     {{> theme_boost/navbar }}
-    <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
+    <div id="page" data-region="mainpage" data-usertour="scroller"
+         class="drawers {{#courseindexopen}}show-drawer-left{{/courseindexopen}} {{#blockdraweropen}}show-drawer-right{{/blockdraweropen}} drag-container">
         <div id="topofscroll"></div>
         {{#showslider}}
-          {{> theme_liquid/slider }}
+            {{> theme_liquid/slider }}
         {{/showslider}}
         <div class="main-inner">
             <div id="page-content" class="d-print-block">
@@ -71,7 +72,7 @@
             </div>
         </div>
         {{#showfaq}}
-          {{> theme_liquid/faq }}
+            {{> theme_liquid/faq }}
         {{/showfaq}}
         {{> theme_boost/footer }}
     </div>
@@ -81,9 +82,9 @@
 </body>
 </html>
 {{#js}}
-M.util.js_pending('theme_boost/loader');
-require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    M.util.js_pending('theme_boost/loader');
+    require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
     Drawer.init();
     M.util.js_complete('theme_boost/loader');
-});
+    });
 {{/js}}

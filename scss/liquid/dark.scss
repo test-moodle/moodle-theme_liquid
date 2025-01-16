@@ -2,7 +2,7 @@ $dark-bg-color: #191c20;
 $dark-box-bg-color: #121519;
 $dark-text-color: rgba($white, .7);
 $dark-link-color: rgba($white, .9);
-$dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
+$dark-box-shadow: 0 .4375rem 1.25rem rgba(0, 0, 0, .24);
 
 [data-bs-theme="dark"] {
   background-color: $dark-bg-color;
@@ -271,12 +271,12 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0,0,0,.24);
 
 @keyframes bg-pulse-grey-dark {
   0% {
-      background-color: $gray-700;
+    background-color: $gray-700;
   }
   50% {
-      background-color: darken($gray-700, 5%);
+    background-color: darken($gray-700, 5%);
   }
   100% {
-      background-color: $gray-700;
+    background-color: $gray-700;
   }
 }

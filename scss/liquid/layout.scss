@@ -1,7 +1,7 @@
 .drawer-toggles {
   .drawer-toggler {
     z-index: #{$zindex-fixed - 10};
-    
+
     @include media-breakpoint-up(md) {
       top: calc(#{$navbar-height * 2} + 0.7rem);
     }

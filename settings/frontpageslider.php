@@ -59,7 +59,7 @@ for ($i = 1; $i <= $numberslides; $i++) {
     $page->add($setting);
 
     // Enable or disable option for slide show.
-    $name = 'theme_liquid/slide' . $i .'status';
+    $name = 'theme_liquid/slide' . $i . 'status';
     $title = get_string('slideshow', 'theme_liquid', ['slide' => $i]);
     $desc = get_string('slideshowdesc', 'theme_liquid', ['slide' => $i]);
     $default = 1;

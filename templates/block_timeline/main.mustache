@@ -43,16 +43,16 @@
     </div>
 </div>
 {{#js}}
-require(
-[
+    require(
+    [
     'jquery',
     'block_timeline/main',
-],
-function(
+    ],
+    function(
     $,
     Main
-) {
+    ) {
     var root = $('#block-timeline-{{uniqid}}-{{timelineinstanceid}}');
     Main.init(root);
-});
+    });
 {{/js}}

@@ -22,8 +22,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Returns the main SCSS content.
  *
@@ -31,23 +29,23 @@ defined('MOODLE_INTERNAL') || die();
  * @return string
  */
 function theme_liquid_get_main_scss_content($theme) {
-  global $CFG;
+    global $CFG;
 
-  $scss = '';
-  $filename = !empty($theme->settings->preset) ? $theme->settings->preset : null;
-  $fs = get_file_storage();
+    $scss = '';
+    $filename = !empty($theme->settings->preset) ? $theme->settings->preset : null;
+    $fs = get_file_storage();
 
-  $context = context_system::instance();
-  if ($filename == 'default.scss') {
-      $scss .= file_get_contents($CFG->dirroot . '/theme/liquid/scss/preset/default.scss');
-  } else if ($filename == 'plain.scss') {
-      $scss .= file_get_contents($CFG->dirroot . '/theme/liquid/scss/preset/plain.scss');
-  } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_liquid', 'preset', 0, '/', $filename))) {
-      $scss .= $presetfile->get_content();
-  } else {
-      $scss .= file_get_contents($CFG->dirroot . '/theme/liquid/scss/preset/default.scss');
-  }
-  return $scss;
+    $context = context_system::instance();
+    if ($filename == 'default.scss') {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/liquid/scss/preset/default.scss');
+    } else if ($filename == 'plain.scss') {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/liquid/scss/preset/plain.scss');
+    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_liquid', 'preset', 0, '/', $filename))) {
+        $scss .= $presetfile->get_content();
+    } else {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/liquid/scss/preset/default.scss');
+    }
+    return $scss;
 }
 
 /**
@@ -57,42 +55,42 @@ function theme_liquid_get_main_scss_content($theme) {
  * @return array
  */
 function theme_liquid_get_pre_scss($theme) {
-  $scss = '';
-  $configurable = [
-      // Config key => [variableName, ...].
-      'primarycolor' => ['primary'],
-      'textprimarycolor' => ['text-on-primary'],
-      'successcolor' => ['success'],
-      'infocolor' => ['info'],
-      'warningcolor' => ['warning'],
-      'dangercolor' => ['danger'],
-      'secondarycolor' => ['secondary'],
-      'textsecondarycolor' => ['text-on-secondary'],
-      'fontfamily' => ['font-family-base'],
-      'bodyfont' => ['font-size-base'],
-      'borderwidth' => ['border-width'],
-      'roundedbase' => ['border-radius'],
-      'roundedlg' => ['border-radius-lg'],
-      'roundedsm' => ['border-radius-sm'],
-   ];
+    $scss = '';
+    $configurable = [
+        // Config key => [variableName, ...].
+        'primarycolor' => ['primary'],
+        'textprimarycolor' => ['text-on-primary'],
+        'successcolor' => ['success'],
+        'infocolor' => ['info'],
+        'warningcolor' => ['warning'],
+        'dangercolor' => ['danger'],
+        'secondarycolor' => ['secondary'],
+        'textsecondarycolor' => ['text-on-secondary'],
+        'fontfamily' => ['font-family-base'],
+        'bodyfont' => ['font-size-base'],
+        'borderwidth' => ['border-width'],
+        'roundedbase' => ['border-radius'],
+        'roundedlg' => ['border-radius-lg'],
+        'roundedsm' => ['border-radius-sm'],
+    ];
 
-  // Prepend variables first.
-  foreach ($configurable as $configkey => $targets) {
-      $value = isset($theme->settings->{$configkey}) ? $theme->settings->{$configkey} : null;
-      if (empty($value)) {
-          continue;
-      }
-      array_map(function($target) use (&$scss, $value) {
-          $scss .= '$' . $target . ': ' . $value . ";\n";
-      }, (array) $targets);
-  }
+    // Prepend variables first.
+    foreach ($configurable as $configkey => $targets) {
+        $value = isset($theme->settings->{$configkey}) ? $theme->settings->{$configkey} : null;
+        if (empty($value)) {
+            continue;
+        }
+        array_map(function ($target) use (&$scss, $value) {
+            $scss .= '$' . $target . ': ' . $value . ";\n";
+        }, (array)$targets);
+    }
 
-  // Prepend pre-scss.
-  if (!empty($theme->settings->scsspre)) {
-      $scss .= $theme->settings->scsspre;
-  }
+    // Prepend pre-scss.
+    if (!empty($theme->settings->scsspre)) {
+        $scss .= $theme->settings->scsspre;
+    }
 
-  return $scss;
+    return $scss;
 }
 
 /**
@@ -102,8 +100,8 @@ function theme_liquid_get_pre_scss($theme) {
  * @return string
  */
 function theme_liquid_get_extra_scss($theme) {
-  $content = '';
-  return !empty($theme->settings->scss) ? $theme->settings->scss . ' ' . $content : $content;
+    $content = '';
+    return !empty($theme->settings->scss) ? $theme->settings->scss . ' ' . $content : $content;
 }
 
 /**
@@ -112,21 +110,19 @@ function theme_liquid_get_extra_scss($theme) {
  * @return array An associative array of HTML attributes.
  */
 function theme_liquid_add_htmlattributes() {
-    $darkThemeCookie = isset($_COOKIE['darkThemeEnabled']) ? $_COOKIE['darkThemeEnabled'] : null;
-    $theme = ($darkThemeCookie === '1') ? 'dark' : 'light';
+    $darkthemecookie = isset($_COOKIE['darkThemeEnabled']) ? $_COOKIE['darkThemeEnabled'] : null;
+    $theme = ($darkthemecookie === '1') ? 'dark' : 'light';
 
-    return array(
+    return [
         'data-bs-theme' => $theme,
-    );
+    ];
 }
 
 /**
  * Return theme setting value.
- * 
+ *
  * @param string $setting
  * @param mixed $format
- * @param stdClass $CFG
- * @param moodle_page $PAGE
  * @return mixed
  */
 function theme_liquid_setting($setting, $format = true) {
@@ -174,7 +170,6 @@ function theme_liquid_pluginfile($course, $cm, $context, $filearea, $args, $forc
     static $theme;
 
     if (empty($theme)) {
-       
         $theme = theme_config::load('liquid');
     }
     if ($context->contextlevel == CONTEXT_SYSTEM) {

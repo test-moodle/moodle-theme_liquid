@@ -54,50 +54,50 @@ $headercontent = $header->export_for_template($renderer);
 $PAGE->requires->js_call_amd('theme_liquid/darkmode', 'init');
 
 $templatecontext = [
-  'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-  'output' => $OUTPUT,
-  'bodyattributes' => $bodyattributes,
-  'primarymoremenu' => $primarymenu['moremenu'],
-  'secondarymoremenu' => $secondarynavigation ?: false,
-  'mobileprimarynav' => $primarymenu['mobileprimarynav'],
-  'usermenu' => $primarymenu['user'],
-  'langmenu' => $primarymenu['lang'],
-  'headercontent' => $headercontent,
-  'addblockbutton' => $addblockbutton,
-  'leftnavigation' => theme_liquid_setting('leftnavigation'),
+    'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
+    'output' => $OUTPUT,
+    'bodyattributes' => $bodyattributes,
+    'primarymoremenu' => $primarymenu['moremenu'],
+    'secondarymoremenu' => $secondarynavigation ?: false,
+    'mobileprimarynav' => $primarymenu['mobileprimarynav'],
+    'usermenu' => $primarymenu['user'],
+    'langmenu' => $primarymenu['lang'],
+    'headercontent' => $headercontent,
+    'addblockbutton' => $addblockbutton,
+    'leftnavigation' => theme_liquid_setting('leftnavigation'),
 ];
 
-// Frontpage slider data
+// Frontpage slider data.
 $slider = [];
 $slider['showslider'] = theme_liquid_setting('showslider');
 $slider['numberslides'] = theme_liquid_setting('numberslides');
 for ($i = 1; $i <= $slider['numberslides']; $i++) {
-  $slide = [];
-  $slide['slidestatus'] = theme_liquid_setting('slide' . $i .'status');
-  $slide['slideimage'] = $PAGE->theme->setting_file_url('slide' . $i .'image', 'slide' . $i .'image');
-  $slide['slidetext'] = theme_liquid_setting('slide' . $i .'text', 'format_html');
-  $slide['slidelink'] = theme_liquid_setting('slide' . $i .'link');
-  $slider['slides'][] = $slide;
+    $slide = [];
+    $slide['slidestatus'] = theme_liquid_setting('slide' . $i . 'status');
+    $slide['slideimage'] = $PAGE->theme->setting_file_url('slide' . $i . 'image', 'slide' . $i . 'image');
+    $slide['slidetext'] = theme_liquid_setting('slide' . $i . 'text', 'format_html');
+    $slide['slidelink'] = theme_liquid_setting('slide' . $i . 'link');
+    $slider['slides'][] = $slide;
 }
 
 $templatecontext += $slider;
 
-// Frontpage FAQ data
+// Frontpage FAQ data.
 $faq = [];
 $faq['showfaq'] = theme_liquid_setting('showfaq');
 $faq['numberfaq'] = theme_liquid_setting('numberfaq');
 $faq['faqtitle'] = theme_liquid_setting('faqtitle');
 $faq['faqdescription'] = theme_liquid_setting('faqdescription');
 for ($i = 1; $i <= $faq['numberfaq']; $i++) {
-  $question = [];
-  $question['isfirst'] = false;
-  if ($i === 1) {
-    $question['isfirst'] = true;
-  }
-  $question['faqid'] = $i;
-  $question['faqquestion'] = theme_liquid_setting('faq' . $i .'question');
-  $question['faqanswer'] = theme_liquid_setting('faq' . $i .'answer', 'format_html');
-  $faq['questions'][] = $question;
+    $question = [];
+    $question['isfirst'] = false;
+    if ($i === 1) {
+        $question['isfirst'] = true;
+    }
+    $question['faqid'] = $i;
+    $question['faqquestion'] = theme_liquid_setting('faq' . $i . 'question');
+    $question['faqanswer'] = theme_liquid_setting('faq' . $i . 'answer', 'format_html');
+    $faq['questions'][] = $question;
 }
 
 $templatecontext += $faq;

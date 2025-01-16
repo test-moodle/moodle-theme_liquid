@@ -1,13 +1,13 @@
 .dashboard-card-deck:not(.fixed-width-cards) {
   @media (min-width: 1480px) {
     .dashboard-card {
-        width: calc(25% - #{$card-gutter});
+      width: calc(25% - #{$card-gutter});
     }
   }
 
   @media (min-width: 1920px) {
     .dashboard-card {
-        width: calc(20% - #{$card-gutter});
+      width: calc(20% - #{$card-gutter});
     }
   }
 }
@@ -16,16 +16,16 @@ section:not(#region-main) .block_calendar_month {
   .maincalendar {
     .controls {
       margin: 0;
-  
+
       h4 {
         width: 60% !important;
         margin-bottom: 0;
       }
-  
+
       .arrow_link {
         width: 20% !important;
         text-decoration: none;
-  
+
         .arrow_text {
           display: none;
         }
