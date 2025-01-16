@@ -47,16 +47,16 @@ $page->add($setting);
 $name = 'theme_liquid/bodyfont';
 $title = get_string('bodyfont', 'theme_liquid');
 $default = '0.875rem';
-$options = array(
-  '0.75rem' => '0.75',
-  '0.875rem' => '0.875',
-  '1rem' => '1',
-  '1.05rem' => '1.05',
-  '1.1rem' => '1.1',
-  '1.15rem' => '1.15',
-  '1.25rem' => '1.25',
-  '1.375rem' => '1.375',
-);
+$options = [
+    '0.75rem' => '0.75',
+    '0.875rem' => '0.875',
+    '1rem' => '1',
+    '1.05rem' => '1.05',
+    '1.1rem' => '1.1',
+    '1.15rem' => '1.15',
+    '1.25rem' => '1.25',
+    '1.375rem' => '1.375',
+];
 
 $setting = new admin_setting_configselect($name, $title, '', $default, $options);
 $setting->set_updatedcallback('theme_reset_all_caches');

@@ -56,29 +56,30 @@
     }
 }}
 {{#leftnavigation}}
-<nav class="navbar fixed-left d-none d-xlg-flex p-0" aria-label="{{#str}}sitemenubar, admin{{/str}}">
-    <a href="{{{ config.homeurl }}}" class="navbar-brand m-0 d-flex text-center w-100">
-        {{# output.should_display_navbar_logo }}
-            <img src="{{output.get_logo_url}}" class="logo m-auto" alt="{{sitename}}">
-        {{/ output.should_display_navbar_logo }}
-        {{^ output.should_display_navbar_logo }}
-            <span class="m-auto">{{{ sitename }}}</span>
-        {{/ output.should_display_navbar_logo }}
-    </a>
-    {{#primarymoremenu}}
-        <div class="primary-navigation mt-3">
-            {{> core/moremenu}}
-        </div>
-    {{/primarymoremenu}}
+    <nav class="navbar fixed-left d-none d-xlg-flex p-0" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+        <a href="{{{ config.homeurl }}}" class="navbar-brand m-0 d-flex text-center w-100">
+            {{# output.should_display_navbar_logo }}
+                <img src="{{output.get_logo_url}}" class="logo m-auto" alt="{{sitename}}">
+            {{/ output.should_display_navbar_logo }}
+            {{^ output.should_display_navbar_logo }}
+                <span class="m-auto">{{{ sitename }}}</span>
+            {{/ output.should_display_navbar_logo }}
+        </a>
+        {{#primarymoremenu}}
+            <div class="primary-navigation mt-3">
+                {{> core/moremenu}}
+            </div>
+        {{/primarymoremenu}}
 
-    {{> theme_liquid/socialicons}}
+        {{> theme_liquid/socialicons}}
 
-    {{{ output.edit_switch }}}
-</nav>
+        {{{ output.edit_switch }}}
+    </nav>
 {{/leftnavigation}}
 
 <nav class="navbar fixed-top bg-white navbar-expand">
-    <button class="navbar-toggler aabtn d-block d-xlg-none p-0 mr-3 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
+    <button class="navbar-toggler aabtn d-block d-xlg-none p-0 mr-3 border-0" data-toggler="drawers"
+            data-action="toggle" data-target="theme_boost-drawers-primary">
         <span class="navbar-toggler-icon"></span>
         <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
     </button>
@@ -148,5 +149,6 @@
         {{{ output.edit_switch }}}
     </div>
 </nav>
-{{#secondarymoremenu}}<div class="secondary-nav-helper"></div>{{/secondarymoremenu}}
+{{#secondarymoremenu}}
+    <div class="secondary-nav-helper"></div>{{/secondarymoremenu}}
 {{> theme_boost/primary-drawer-mobile }}

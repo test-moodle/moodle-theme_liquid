@@ -42,11 +42,11 @@
         <div id="page-content" class="row">
             <div id="region-main-box" class="col-12">
                 <section id="region-main" class="col-12 h-100" aria-label="{{#str}}content{{/str}}">
-                <div class="login-wrapper">
-                    <div class="login-container">
-                    {{{ output.main_content }}}
+                    <div class="login-wrapper">
+                        <div class="login-container">
+                            {{{ output.main_content }}}
+                        </div>
                     </div>
-                </div>
                 </section>
             </div>
         </div>
@@ -56,8 +56,8 @@
 </body>
 </html>
 {{#js}}
-M.util.js_pending('theme_boost/loader');
-require(['theme_boost/loader'], function() {
-  M.util.js_complete('theme_boost/loader');
-});
+    M.util.js_pending('theme_boost/loader');
+    require(['theme_boost/loader'], function() {
+    M.util.js_complete('theme_boost/loader');
+    });
 {{/js}}

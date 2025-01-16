@@ -3,18 +3,18 @@
     padding: 0 !important;
     background: none;
     background-color: $primary;
-  
+
     @include media-breakpoint-up(lg) {
       margin-left: 0;
     }
-  
+
     #page-content {
       height: 100%;
       margin: 0;
-  
+
       #region-main-box {
         padding: 0;
-  
+
         #region-main {
           padding: 0;
         }
@@ -54,7 +54,7 @@
       fieldset {
         margin-bottom: 3rem;
         padding-bottom: 3rem;
-        
+
         &:last-child {
           margin-bottom: 0;
           padding-bottom: 0;

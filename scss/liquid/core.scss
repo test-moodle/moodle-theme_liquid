@@ -13,13 +13,13 @@
 .arrow_link,
 a:not([class]),
 .activityinstance > a {
-    &.focus,
-    &:focus {
-        color: $primary;
-        background-color: transparent;
-        box-shadow: none;
-        text-decoration: underline;
-    }
+  &.focus,
+  &:focus {
+    color: $primary;
+    background-color: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+  }
 }
 
 .header-actions-container {

@@ -26,13 +26,13 @@
 defined('MOODLE_INTERNAL') || die();
 
 if ($ADMIN->fulltree) {
-  $settings = new theme_boost_admin_settingspage_tabs('themesettingliquid', get_string('configtitle', 'theme_liquid'));
-  
-  require('settings/colors.php');
-  require('settings/typography.php');
-  require('settings/borders.php');
-  require('settings/frontpageslider.php');
-  require('settings/frontpagefaq.php');
-  require('settings/additional.php');
-  require('settings/advanced.php');
+    $settings = new theme_boost_admin_settingspage_tabs('themesettingliquid', get_string('configtitle', 'theme_liquid'));
+
+    require('settings/colors.php');
+    require('settings/typography.php');
+    require('settings/borders.php');
+    require('settings/frontpageslider.php');
+    require('settings/frontpagefaq.php');
+    require('settings/additional.php');
+    require('settings/advanced.php');
 }
