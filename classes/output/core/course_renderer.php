@@ -36,6 +36,12 @@ use moodle_url;
  * $renderer = $PAGE->get_renderer('core','course');
  */
 class course_renderer extends \core_course_renderer {
+
+    /**
+     * Returns HTML to print list of available courses for the frontpage
+     *
+     * @return string
+     */
     public function frontpage_available_courses() {
         global $CFG;
 
@@ -71,7 +77,14 @@ class course_renderer extends \core_course_renderer {
         }
     }
 
-
+    /**
+     * Return contents for the available course block on the frontpage.
+     *
+     * @param coursecat_helper $chelper course helper.
+     * @param array $course course detials.
+     *
+     * @return array $data available course data.
+     */
     public function available_coursebox(\coursecat_helper $chelper, $course) {
         $coursecontext = context_course::instance($course->id);
 
