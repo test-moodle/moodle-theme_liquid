@@ -1,144 +1,144 @@
 .drawer-toggles {
-  .drawer-toggler {
-    z-index: #{$zindex-fixed - 10};
+    .drawer-toggler {
+        z-index: #{$zindex-fixed - 10};
 
-    @include media-breakpoint-up(md) {
-      top: calc(#{$navbar-height * 2} + 0.7rem);
+        @include media-breakpoint-up(md) {
+            top: calc(#{$navbar-height * 2} + 0.7rem);
+        }
+
+        @include media-breakpoint-up(xlg) {
+            top: calc(#{$navbar-height} + 0.7rem);
+        }
+
+        .btn {
+            border-radius: $border-radius;
+            background-color: $secondary;
+            color: $white;
+        }
+
+        .no-left-nav & {
+            top: calc(#{$navbar-height * 2} + 0.7rem);
+        }
     }
 
-    @include media-breakpoint-up(xlg) {
-      top: calc(#{$navbar-height} + 0.7rem);
+    .drawer-left-toggle {
+        @include media-breakpoint-up(xlg) {
+            left: $navbar-width;
+
+            .no-left-nav & {
+                left: 0;
+            }
+        }
+
+        .btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
     }
 
-    .btn {
-      border-radius: $border-radius;
-      background-color: $secondary;
-      color: $white;
+    .drawer-right-toggle {
+        .btn {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
     }
-
-    .no-left-nav & {
-      top: calc(#{$navbar-height * 2} + 0.7rem);
-    }
-  }
-
-  .drawer-left-toggle {
-    @include media-breakpoint-up(xlg) {
-      left: $navbar-width;
-
-      .no-left-nav & {
-        left: 0;
-      }
-    }
-
-    .btn {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-  }
-
-  .drawer-right-toggle {
-    .btn {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-  }
 }
 
 #page {
-  &.drawers {
-    padding-left: .5rem;
-    padding-right: .5rem;
+    &.drawers {
+        padding-left: .5rem;
+        padding-right: .5rem;
 
-    @include media-breakpoint-up(xlg) {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-
-    @include media-breakpoint-up(xl) {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-
-    &.show-drawer-left {
-      @include media-breakpoint-up(xlg) {
-        margin-left: calc(#{$navbar-width} + #{$drawer-left-width});
-
-        .no-left-nav & {
-          margin-left: $drawer-left-width;
+        @include media-breakpoint-up(xlg) {
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
-      }
 
-      @include media-breakpoint-up(xl) {
-        padding-left: 1.5rem;
-      }
-    }
-
-    &.show-drawer-right {
-      margin-right: 0;
-
-      .no-left-nav & {
-        @include media-breakpoint-up(lg) {
-          margin-right: $drawer-right-width;
+        @include media-breakpoint-up(xl) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
         }
-      }
 
-      @include media-breakpoint-up(xlg) {
-        margin-left: $navbar-width;
+        &.show-drawer-left {
+            @include media-breakpoint-up(xlg) {
+                margin-left: calc(#{$navbar-width} + #{$drawer-left-width});
 
-        .no-left-nav & {
-          margin-left: 0;
+                .no-left-nav & {
+                    margin-left: $drawer-left-width;
+                }
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-left: 1.5rem;
+            }
         }
-      }
 
-      @include media-breakpoint-up(xl) {
-        margin-right: $drawer-right-width;
-        padding-right: 1.5rem;
-      }
-    }
+        &.show-drawer-right {
+            margin-right: 0;
 
-    #region-main {
-      > .notifications {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
+            .no-left-nav & {
+                @include media-breakpoint-up(lg) {
+                    margin-right: $drawer-right-width;
+                }
+            }
+
+            @include media-breakpoint-up(xlg) {
+                margin-left: $navbar-width;
+
+                .no-left-nav & {
+                    margin-left: 0;
+                }
+            }
+
+            @include media-breakpoint-up(xl) {
+                margin-right: $drawer-right-width;
+                padding-right: 1.5rem;
+            }
+        }
+
+        #region-main {
+            > .notifications {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
     }
-  }
 }
 
 .secondary-nav-helper {
-  ~ #page,
-  ~ #page.drawers {
-    margin-top: #{$navbar-height * 2};
+    ~ #page,
+    ~ #page.drawers {
+        margin-top: #{$navbar-height * 2};
 
-    @include media-breakpoint-up(xlg) {
-      margin-top: $navbar-height;
+        @include media-breakpoint-up(xlg) {
+            margin-top: $navbar-height;
+        }
+
+        .no-left-nav & {
+            margin-top: #{$navbar-height * 2};
+        }
     }
 
-    .no-left-nav & {
-      margin-top: #{$navbar-height * 2};
-    }
-  }
-
-  ~ .drawer-left,
-  ~ .drawer-right {
-    top: #{$navbar-height * 2};
-    height: calc(100vh - #{$navbar-height * 2});
-
-    @include media-breakpoint-up(xlg) {
-      top: $navbar-height;
-      height: calc(100vh - #{$navbar-height});
-
-      .no-left-nav & {
+    ~ .drawer-left,
+    ~ .drawer-right {
         top: #{$navbar-height * 2};
         height: calc(100vh - #{$navbar-height * 2});
-      }
-    }
 
-    &.drawer-primary {
-      .no-left-nav & {
-        top: 0;
-        height: 100dvh;
-      }
+        @include media-breakpoint-up(xlg) {
+            top: $navbar-height;
+            height: calc(100vh - #{$navbar-height});
+
+            .no-left-nav & {
+                top: #{$navbar-height * 2};
+                height: calc(100vh - #{$navbar-height * 2});
+            }
+        }
+
+        &.drawer-primary {
+            .no-left-nav & {
+                top: 0;
+                height: 100dvh;
+            }
+        }
     }
-  }
 }

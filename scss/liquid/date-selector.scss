@@ -1,8 +1,8 @@
 #dateselector-calendar-panel {
-  top: 30px !important;
+    top: 30px !important;
 
-  @include media-breakpoint-up(sm) {
-    top: 60px !important;
-  }
+    @include media-breakpoint-up(sm) {
+        top: 60px !important;
+    }
 }
 

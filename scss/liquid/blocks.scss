@@ -1,50 +1,50 @@
 .dashboard-card-deck:not(.fixed-width-cards) {
-  @media (min-width: 1480px) {
-    .dashboard-card {
-      width: calc(25% - #{$card-gutter});
+    @media (min-width: 1480px) {
+        .dashboard-card {
+            width: calc(25% - #{$card-gutter});
+        }
     }
-  }
 
-  @media (min-width: 1920px) {
-    .dashboard-card {
-      width: calc(20% - #{$card-gutter});
+    @media (min-width: 1920px) {
+        .dashboard-card {
+            width: calc(20% - #{$card-gutter});
+        }
     }
-  }
 }
 
 section:not(#region-main) .block_calendar_month {
-  .maincalendar {
-    .controls {
-      margin: 0;
+    .maincalendar {
+        .controls {
+            margin: 0;
 
-      h4 {
-        width: 60% !important;
-        margin-bottom: 0;
-      }
+            h4 {
+                width: 60% !important;
+                margin-bottom: 0;
+            }
 
-      .arrow_link {
-        width: 20% !important;
-        text-decoration: none;
+            .arrow_link {
+                width: 20% !important;
+                text-decoration: none;
 
-        .arrow_text {
-          display: none;
+                .arrow_text {
+                    display: none;
+                }
+            }
         }
-      }
-    }
 
-    .calendartable.calendarmonth td {
-      height: 2.125rem;
+        .calendartable.calendarmonth td {
+            height: 2.125rem;
 
-      &::after {
-        display: none !important;
-      }
-    }
+            &::after {
+                display: none !important;
+            }
+        }
 
-    .calendarmonth td .day-number-circle {
-      width: 100%;
-      height: auto;
-      max-width: 2.125rem;
-      aspect-ratio: 1 / 1;
+        .calendarmonth td .day-number-circle {
+            width: 100%;
+            height: auto;
+            max-width: 2.125rem;
+            aspect-ratio: 1 / 1;
+        }
     }
-  }
 }

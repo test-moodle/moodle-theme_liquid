@@ -1,45 +1,45 @@
 .drawer {
-  background-color: $gray-300;
+    background-color: $gray-300;
 
-  &.drawer-left {
-    &.show {
-      @include media-breakpoint-up(xlg) {
-        left: $navbar-width;
+    &.drawer-left {
+        &.show {
+            @include media-breakpoint-up(xlg) {
+                left: $navbar-width;
 
-        .no-left-nav & {
-          left: 0;
+                .no-left-nav & {
+                    left: 0;
+                }
+            }
         }
-      }
+
+        &.drawer-primary {
+            .list-group-item {
+                background: none;
+                color: $text-on-primary;
+
+                &.active {
+                    background-color: rgba($text-on-primary, .1);
+
+                    @include media-breakpoint-up(xlg) {
+                        background-color: $primary;
+                    }
+                }
+            }
+
+            .drawertoggle {
+                margin-left: 0;
+                padding: .75rem 1.25rem;
+                color: $text-on-primary;
+            }
+        }
     }
 
-    &.drawer-primary {
-      .list-group-item {
-        background: none;
+    &-primary {
+        background-color: $primary;
         color: $text-on-primary;
-
-        &.active {
-          background-color: rgba($text-on-primary, .1);
-
-          @include media-breakpoint-up(xlg) {
-            background-color: $primary;
-          }
-        }
-      }
-
-      .drawertoggle {
-        margin-left: 0;
-        padding: .75rem 1.25rem;
-        color: $text-on-primary;
-      }
     }
-  }
-
-  &-primary {
-    background-color: $primary;
-    color: $text-on-primary;
-  }
 }
 
 .drawercontent {
-  padding: 1rem;
+    padding: 1rem;
 }
