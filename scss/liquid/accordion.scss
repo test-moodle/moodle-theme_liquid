@@ -43,7 +43,9 @@
 .accordion-body {
     padding: 0 1.5rem 1.5rem;
 
-    p, ul, ol {
+    p,
+    ul,
+    ol {
         &:last-child {
             margin-bottom: 0;
         }
