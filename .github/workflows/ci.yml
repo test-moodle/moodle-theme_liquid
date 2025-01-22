@@ -29,6 +29,14 @@ jobs:
       matrix:
         php-versions: ['7.4']
         database: ['pgsql', 'mariadb']
+        moodle-versions: [
+          'MOODLE_400_STABLE',
+          'MOODLE_401_STABLE',
+          'MOODLE_402_STABLE',
+          'MOODLE_403_STABLE',
+          'MOODLE_404_STABLE',
+          'MOODLE_405_STABLE',
+        ]
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
@@ -63,7 +71,7 @@ jobs:
         env:
           DB: ${{ matrix.database }}
           # TODO: Omitted MOODLE_BRANCH results in regex failure, investigate.
-          MOODLE_BRANCH: 'MOODLE_400_STABLE'
+          MOODLE_BRANCH: ${{ matrix.moodle-versions }}
 
       - name: Run phplint
         if: ${{ always() }}
