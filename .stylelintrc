@@ -3,7 +3,9 @@
         "stylelint-csstree-validator"
     ],
     "rules": {
-        "csstree/validator": true,
+        "csstree/validator": {
+            "ignoreUnits": ["dvh"]
+        },
         "at-rule-empty-line-before": [ "always",
             {
                 "except": [ "blockless-after-blockless"],
