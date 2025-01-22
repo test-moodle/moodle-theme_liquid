@@ -4,6 +4,9 @@
     ],
     "rules": {
         "csstree/validator": {
+            "properties": {
+                "height": "<length> | <percentage> | <number>dvh"
+            },
             "ignoreValue": "^[0-9]+dvh$"
         },
         "at-rule-empty-line-before": [ "always",
