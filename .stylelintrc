@@ -4,7 +4,7 @@
     ],
     "rules": {
         "csstree/validator": {
-            "ignoreUnits": ["dvh"]
+            "ignoreValue": "^[0-9]+dvh$"
         },
         "at-rule-empty-line-before": [ "always",
             {
