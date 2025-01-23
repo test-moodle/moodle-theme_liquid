@@ -249,7 +249,7 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0, 0, 0, .24);
     }
 
     .navbar .navbar-toggler-icon {
-        background-image: $navbar-dark-toggler-icon-bg;
+        background-image: url([[pix:theme|burger-menu-white]]);
     }
 
     @include media-breakpoint-down(sm) {

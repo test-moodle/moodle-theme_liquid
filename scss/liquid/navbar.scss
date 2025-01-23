@@ -216,7 +216,7 @@
     }
 
     .navbar-toggler-icon {
-        background-image: escape-svg($navbar-light-toggler-icon-bg);
+        background-image: url([[pix:theme|burger-menu-black]]);
     }
 }
 
