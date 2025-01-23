@@ -5,7 +5,10 @@
     "rules": {
         "csstree/validator": {
             "properties": {
-                "height": "<length> | <percentage> | <number>dvh"
+                "height": "<length> | <percentage> | <dvh>"
+            },
+            "types": {
+                "dvh": "<number>dvh"
             },
             "ignoreValue": "^[0-9]+dvh$"
         },
