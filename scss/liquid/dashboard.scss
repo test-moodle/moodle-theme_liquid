@@ -13,7 +13,7 @@
         grid-column: 1/3;
 
         @include media-breakpoint-up(lg) {
-            margin-bottom: 0 !important;
+            margin-bottom: 0;
         }
 
         &.block_timeline {
@@ -82,7 +82,7 @@
             height: 2.875rem;
             padding: 0;
             border: 0;
-            text-align: center !important;
+            text-align: center;
             font-weight: 400;
             vertical-align: middle;
 
@@ -103,7 +103,7 @@
             &:hover,
             &:focus,
             &:active {
-                background: none !important;
+                background: none;
                 color: $black;
 
                 .day-number-circle {

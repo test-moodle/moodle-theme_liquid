@@ -18,12 +18,12 @@ section:not(#region-main) .block_calendar_month {
             margin: 0;
 
             h4 {
-                width: 60% !important;
+                width: 60%;
                 margin-bottom: 0;
             }
 
             .arrow_link {
-                width: 20% !important;
+                width: 20%;
                 text-decoration: none;
 
                 .arrow_text {
@@ -36,7 +36,7 @@ section:not(#region-main) .block_calendar_month {
             height: 2.125rem;
 
             &::after {
-                display: none !important;
+                display: none;
             }
         }
 
