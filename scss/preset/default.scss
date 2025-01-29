@@ -211,6 +211,11 @@ $tooltip-border-radius: #{$border-radius-sm / 1.5} !default;
 // Modal variables.
 $modal-backdrop-opacity: 0.65 !default;
 
+$grid-gutter-width: 30px !default;
+$card-group-margin: $grid-gutter-width * .5 !default;
+$card-deck-margin: $card-group-margin !default;
+$card-gutter : $card-deck-margin * 2;
+
 // Import FontAwesome.
 @import "fontawesome";
 
