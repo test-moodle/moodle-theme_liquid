@@ -212,7 +212,7 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0, 0, 0, .24);
     .block_myoverview,
     .dashboard-card-footer,
     .fp-iconview .fp-filename-field .fp-filename {
-        background-color: transparent !important;
+        background-color: transparent;
     }
 
     .frontpage-slider .swiper-slide .ratio .image-wrapper + .content-wrapper {
@@ -260,7 +260,9 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0, 0, 0, .24);
         .nav-pills {
             .nav-link {
                 &.active {
+                    /* stylelint-disable-next-line declaration-no-important */
                     border-color: $white !important;
+                    /* stylelint-disable-next-line declaration-no-important */
                     color: $white !important;
                 }
             }
