@@ -1,6 +1,6 @@
 .pagelayout-login {
     #page {
-        padding: 0 !important;
+        padding: 0;
         background: none;
         background-color: $primary;
 
@@ -72,7 +72,7 @@
                         > div {
                             flex: 0 0 auto;
                             max-width: none;
-                            padding: 0 !important;
+                            padding: 0;
                         }
 
                         .form-control {
@@ -86,7 +86,7 @@
                         flex: 0 0 auto;
 
                         .col-form-label {
-                            display: none !important;
+                            display: none;
                         }
 
                         .felement {
@@ -107,6 +107,7 @@
 }
 
 .login-container {
+    /* stylelint-disable-next-line declaration-no-important */
     width: 100% !important;
     margin: 0;
     padding: 0;

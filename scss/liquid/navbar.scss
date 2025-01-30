@@ -12,10 +12,12 @@
 
         .editmode-switch-form {
             @include media-breakpoint-up(xlg) {
+                /* stylelint-disable-next-line declaration-no-important */
                 display: none !important;
             }
 
             .no-left-nav & {
+                /* stylelint-disable-next-line declaration-no-important */
                 display: flex !important;
             }
         }
@@ -202,6 +204,7 @@
         }
 
         .no-left-nav & {
+            /* stylelint-disable-next-line declaration-no-important */
             display: flex !important;
             color: $primary;
         }

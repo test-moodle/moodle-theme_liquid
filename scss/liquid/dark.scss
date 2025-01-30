@@ -62,6 +62,7 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0, 0, 0, .24);
 
     .btn.text-primary,
     textarea {
+        /* stylelint-disable-next-line declaration-no-important */
         color: $dark-link-color !important;
     }
 
@@ -116,6 +117,7 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0, 0, 0, .24);
     &.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax .yui-layout-unit.yui-layout-unit-center div.yui-layout-bd,
     .mdl-chat-my-entry .chat-message .text,
     .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
+        /* stylelint-disable-next-line declaration-no-important */
         background-color: $dark-box-bg-color !important;
     }
 
@@ -160,6 +162,7 @@ $dark-box-shadow: 0 .4375rem 1.25rem rgba(0, 0, 0, .24);
     .popover-region-container,
     .popover-region-footer-container,
     .popover-region-header-container {
+        /* stylelint-disable-next-line declaration-no-important */
         border-color: $gray-800 !important;
     }
 
