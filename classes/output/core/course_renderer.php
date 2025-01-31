@@ -65,9 +65,8 @@ class course_renderer extends \core_course_renderer {
 
         if (!empty($courses)) {
             $data = [];
-            $attributes = $chelper->get_and_erase_attributes('courses');
             foreach ($courses as $course) {
-                $data[] = $this->available_coursebox($chelper, $course);
+                $data[] = $this->available_coursebox($course);
             }
 
             return $this->output->render_from_template(
@@ -80,12 +79,11 @@ class course_renderer extends \core_course_renderer {
     /**
      * Return contents for the available course block on the frontpage.
      *
-     * @param coursecat_helper $chelper course helper.
      * @param array $course course detials.
      *
      * @return array $data available course data.
      */
-    public function available_coursebox(\coursecat_helper $chelper, $course) {
+    public function available_coursebox($course) {
         $coursecontext = context_course::instance($course->id);
 
         // Category.
