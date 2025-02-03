@@ -2,15 +2,15 @@
  * Tabs
  */
 .nav-tabs {
-  .nav-link {
-    @include border-radius($nav-tabs-border-radius);
+    .nav-link {
+        @include border-radius($nav-tabs-border-radius);
 
-    &.disabled {
-      font-style: normal;
+        &.disabled {
+            font-style: normal;
+        }
     }
-  }
 
-  .dropdown-menu {
-    @include border-radius($nav-tabs-border-radius);
-  }
+    .dropdown-menu {
+        @include border-radius($nav-tabs-border-radius);
+    }
 }

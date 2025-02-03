@@ -1,47 +1,48 @@
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background-color: $secondary !important;
+    /* stylelint-disable-next-line declaration-no-important */
+    background-color: $secondary !important;
 }
 
 .swiper {
-  .btn-prev,
-  .btn-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: opacity ease .3s;
-    opacity: 0;
-    z-index: 2;
-
-    &:hover {
-      background-color: $primary;
-    }
-
-    &:disabled:hover {
-      background-color: rgba($white, .5);
-    }
-  }
-
-  .btn-prev {
-    left: 1rem;
-
-    @include media-breakpoint-up(sm) {
-      left: 2rem;
-    }
-  }
-
-  .btn-next {
-    right: 1rem;
-
-    @include media-breakpoint-up(sm) {
-      right: 2rem;
-    }
-  }
-
-  &:hover,
-  &:focus-within {
     .btn-prev,
     .btn-next {
-      opacity: 1;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity ease .3s;
+        opacity: 0;
+        z-index: 2;
+
+        &:hover {
+            background-color: $primary;
+        }
+
+        &:disabled:hover {
+            background-color: rgba($white, .5);
+        }
     }
-  }
+
+    .btn-prev {
+        left: 1rem;
+
+        @include media-breakpoint-up(sm) {
+            left: 2rem;
+        }
+    }
+
+    .btn-next {
+        right: 1rem;
+
+        @include media-breakpoint-up(sm) {
+            right: 2rem;
+        }
+    }
+
+    &:hover,
+    &:focus-within {
+        .btn-prev,
+        .btn-next {
+            opacity: 1;
+        }
+    }
 }

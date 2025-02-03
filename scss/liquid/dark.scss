@@ -5,278 +5,283 @@ $dark-link-color: rgba($white, .9);
 $dark-box-shadow: 0 .4375rem 1.25rem rgba(0, 0, 0, .24);
 
 [data-bs-theme="dark"] {
-  background-color: $dark-bg-color;
-
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6,
-  .navbar-nav .popover-region > * > .icon,
-  .navbar .secondary-navbar .nav-tabs .nav-link,
-  .navbar .main-navbar .nav-link,
-  .block .block-cards span.categoryname,
-  .block .block-cards .btn-link,
-  .dropdown-menu,
-  .form-control,
-  .custom-select,
-  .btn:not(.btn-outline-secondary):not(.btn-outline-primary),
-  .frontpage-slider .swiper-slide .ratio .content-wrapper,
-  .frontpage-slider .swiper-slide .ratio .content-wrapper :not(.btn) {
-    color: $dark-text-color;
-  }
-
-  a,
-  .maincalendar .calendarmonth td a,
-  .maincalendar .calendarmonth th a,
-  .maincalendar .calendarmonth td:hover .day-number-circle,
-  .maincalendar .calendarmonth td:focus .day-number-circle,
-  .maincalendar .calendarmonth td:active .day-number-circle,
-  .close,
-  .nav-tabs .nav-link.active,
-  .nav-tabs .nav-item.show .nav-link,
-  .courseindex .courseindex-item:hover .courseindex-link,
-  .courseindex .courseindex-item:hover .courseindex-chevron,
-  .courseindex .courseindex-item:focus .courseindex-link,
-  .courseindex .courseindex-item:focus .courseindex-chevron,
-  .yui3-button,
-  .page-link:hover,
-  .activity-add,
-  .block-add,
-  .navbar .secondary-navbar .nav-tabs .nav-link:hover,
-  .navbar .secondary-navbar .nav-tabs .nav-link:focus,
-  .navbar .secondary-navbar .nav-tabs .nav-link.active,
-  .navbar .main-navbar .nav-link:hover,
-  .navbar .main-navbar .nav-link:focus,
-  .navbar .main-navbar .nav-link.active {
-    color: $dark-link-color;
-  }
-
-  .btn.text-primary,
-  textarea {
-    color: $dark-link-color !important;
-  }
-
-  .fp-thumbnail {
-    background-color: $gray-600;
-  }
-
-  body,
-  .card,
-  .activity-add,
-  .block-add,
-  .btn.btn-icon:hover,
-  .btn.btn-icon:focus,
-  .path-mod .activity-header:not(:empty),
-  .generaltable thead .sticky-column,
-  .generaltable tbody tr:nth-of-type(2n),
-  .page-link,
-  .path-mod-assign .gradingtable tr.unselectedrow td,
-  .loginform,
-  .pagelayout-login#page-login-forgot_password .mform,
-  .path-mod-chat .yui-layout-unit-right,
-  &.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax #chat-messages .chat-message.course-theme,
-  #chat-userlist,
-  .editing .activity-item:hover,
-  .editing .activity-item.selected,
-  #page-mod-quiz-edit ul.slots li.section .content,
-  .jschooser .choosercontainer #chooseform .instruction,
-  .jschooser .choosercontainer #chooseform .typesummary,
-  .choosercontainer #chooseform .selected,
-  body#page-question-type-multichoice div[id^="fitem_id_"][id*="fraction_"],
-  body#page-question-type-multichoice div[id^="fitem_id_"][id*="feedback_"],
-  body#page-question-type-multichoice div[id^="fitem_id_"][id*="answer_"],
-  .path-mod-assign [data-region="grade-panel"] {
     background-color: $dark-bg-color;
-  }
 
-  .bg-white,
-  #page.drawers .main-inner,
-  .dropdown-menu,
-  .maincalendar .calendarmonth td:hover .day-number-circle,
-  .maincalendar .calendarmonth td:focus .day-number-circle,
-  .maincalendar .calendarmonth td:active .day-number-circle,
-  .modal-content,
-  .block .block-cards .btn.btn-link.btn-icon:hover,
-  .block .block-cards .btn.btn-link.btn-icon:focus,
-  .message-app,
-  .list-group-item,
-  .moodle-dialogue-base .moodle-dialogue-wrap,
-  .page-link:hover,
-  .bg-light,
-  &.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax,
-  &.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax .yui-layout-unit.yui-layout-unit-center div.yui-layout-bd,
-  .mdl-chat-my-entry .chat-message .text,
-  .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
-    background-color: $dark-box-bg-color !important;
-  }
-
-  .dropdown-menu,
-  .dropdown-divider,
-  #frontpage-available-course-list .coursebox,
-  #frontpage-course-list .coursebox,
-  .course-search-result .coursebox,
-  .border-bottom,
-  .border-left,
-  .border-right,
-  .modal-header,
-  .modal-footer,
-  .mform fieldset,
-  .form-control,
-  .activity-item:not(.activityinline),
-  .course-section,
-  .generaltable th,
-  .generaltable td,
-  .table-bordered th,
-  .table-bordered td,
-  .path-mod .activity-information .activity-dates,
-  .fp-navbar,
-  .filepicker-filelist,
-  .filemanager-container,
-  .fp-iconview .fp-thumbnail,
-  .fp-iconview .fp-thumbnail img,
-  .moodle-dialogue-base .moodle-dialogue-wrap,
-  .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd,
-  .card,
-  .page-link,
-  .page-link:hover,
-  .custom-select,
-  .table th,
-  .table td,
-  .table thead th,
-  .border,
-  .border-top,
-  body#page-question-type-multichoice div[id^="fitem_id_"][id*="fraction_"],
-  body#page-question-type-multichoice div[id^="fitem_id_"][id*="feedback_"],
-  body#page-question-type-multichoice div[id^="fitem_id_"][id*="answer_"],
-  .popover-region-container,
-  .popover-region-footer-container,
-  .popover-region-header-container {
-    border-color: $gray-800 !important;
-  }
-
-  .nav-tabs .nav-link.active,
-  .nav-tabs .nav-item.show .nav-link {
-    border-color: $dark-link-color;
-  }
-
-  .navbar.fixed-top .divider {
-    background-color: $gray-800;
-  }
-
-  .navbar.fixed-left,
-  .path-mod-chat .yui-layout-unit-bottom,
-  #chat-input-area,
-  #chat-input-area table.generaltable,
-  #chat-input-area table.generaltable td.cell,
-  #page-mod-quiz-edit ul.slots li.section li.activity,
-  #page-mod-quiz-edit .section .activity .actions,
-  #page-mod-quiz-edit ul.slots li.section li.activity .instancemaxmarkcontainer,
-  .popover-region-container,
-  .popover-region-footer-container,
-  .no-left-nav .navbar .secondary-navbar nav,
-  .swiper-slide .ratio {
-    background-color: #101216;
-  }
-
-  .drawer,
-  .form-control,
-  .custom-select,
-  textarea,
-  #input-message,
-  .bg-primary-light,
-  .action-menu .dropdown-subpanel.content-displayed {
-    background-color: $gray-900;
-  }
-
-  .moodle-dialogue-base .moodle-dialogue-lightbox {
-    background-color: $black;
-  }
-
-  .dropdown-menu,
-  .drawer-toggles .drawer-toggler .btn {
-    box-shadow: $dark-box-shadow;
-  }
-
-  .block_myoverview,
-  .dashboard-card-footer,
-  .fp-iconview .fp-filename-field .fp-filename {
-    background-color: transparent !important;
-  }
-
-  .frontpage-slider .swiper-slide .ratio .image-wrapper + .content-wrapper {
-    background-color: rgba($black, .5);
-  }
-
-  hr {
-    border-color: rgba($white, .1);
-  }
-
-  .popover-region-toggle::before {
-    border-bottom-color: $gray-800;
-  }
-
-  .popover-region-toggle::after {
-    border-bottom-color: #101216;
-  }
-
-  .navbar .secondary-navbar .usermenu .dropdown-menu .submenu .header .icon,
-  img.icon,
-  .fp-pathbar .fp-path-folder,
-  .fp-pathbar .fp-path-folder-name,
-  &.yui-skin-sam .yui-layout-unit .yui-resize-handle-r .yui-layout-resize-knob,
-  &.yui-skin-sam .yui-layout-unit .yui-resize-handle-l .yui-layout-resize-knob {
-    filter: invert(1);
-  }
-
-  .tox-tinymce {
-    filter: grayscale(100%) invert(95%);
-  }
-
-  .breadcrumb-item:last-child,
-  .breadcrumb-item.active,
-  .breadcrumb-item a:hover,
-  .btn-link:hover {
-    color: $white;
-  }
-
-  .navbar .navbar-toggler-icon {
-    background-image: $navbar-dark-toggler-icon-bg;
-  }
-
-  @include media-breakpoint-down(sm) {
-    .nav-tabs:not(.more-nav),
-    .nav-pills {
-      .nav-link {
-        &.active {
-          border-color: $white !important;
-          color: $white !important;
-        }
-      }
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    .navbar-nav .popover-region > * > .icon,
+    .navbar .secondary-navbar .nav-tabs .nav-link,
+    .navbar .main-navbar .nav-link,
+    .block .block-cards span.categoryname,
+    .block .block-cards .btn-link,
+    .dropdown-menu,
+    .form-control,
+    .custom-select,
+    .btn:not(.btn-outline-secondary):not(.btn-outline-primary),
+    .frontpage-slider .swiper-slide .ratio .content-wrapper,
+    .frontpage-slider .swiper-slide .ratio .content-wrapper :not(.btn) {
+        color: $dark-text-color;
     }
-  }
 
-  .bg-pulse-grey {
-    animation: bg-pulse-grey-dark 2s infinite linear;
-  }
+    a,
+    .maincalendar .calendarmonth td a,
+    .maincalendar .calendarmonth th a,
+    .maincalendar .calendarmonth td:hover .day-number-circle,
+    .maincalendar .calendarmonth td:focus .day-number-circle,
+    .maincalendar .calendarmonth td:active .day-number-circle,
+    .close,
+    .nav-tabs .nav-link.active,
+    .nav-tabs .nav-item.show .nav-link,
+    .courseindex .courseindex-item:hover .courseindex-link,
+    .courseindex .courseindex-item:hover .courseindex-chevron,
+    .courseindex .courseindex-item:focus .courseindex-link,
+    .courseindex .courseindex-item:focus .courseindex-chevron,
+    .yui3-button,
+    .page-link:hover,
+    .activity-add,
+    .block-add,
+    .navbar .secondary-navbar .nav-tabs .nav-link:hover,
+    .navbar .secondary-navbar .nav-tabs .nav-link:focus,
+    .navbar .secondary-navbar .nav-tabs .nav-link.active,
+    .navbar .main-navbar .nav-link:hover,
+    .navbar .main-navbar .nav-link:focus,
+    .navbar .main-navbar .nav-link.active {
+        color: $dark-link-color;
+    }
+
+    .btn.text-primary,
+    textarea {
+        /* stylelint-disable-next-line declaration-no-important */
+        color: $dark-link-color !important;
+    }
+
+    .fp-thumbnail {
+        background-color: $gray-600;
+    }
+
+    body,
+    .card,
+    .activity-add,
+    .block-add,
+    .btn.btn-icon:hover,
+    .btn.btn-icon:focus,
+    .path-mod .activity-header:not(:empty),
+    .generaltable thead .sticky-column,
+    .generaltable tbody tr:nth-of-type(2n),
+    .page-link,
+    .path-mod-assign .gradingtable tr.unselectedrow td,
+    .loginform,
+    .pagelayout-login#page-login-forgot_password .mform,
+    .path-mod-chat .yui-layout-unit-right,
+    &.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax #chat-messages .chat-message.course-theme,
+    #chat-userlist,
+    .editing .activity-item:hover,
+    .editing .activity-item.selected,
+    #page-mod-quiz-edit ul.slots li.section .content,
+    .jschooser .choosercontainer #chooseform .instruction,
+    .jschooser .choosercontainer #chooseform .typesummary,
+    .choosercontainer #chooseform .selected,
+    body#page-question-type-multichoice div[id^="fitem_id_"][id*="fraction_"],
+    body#page-question-type-multichoice div[id^="fitem_id_"][id*="feedback_"],
+    body#page-question-type-multichoice div[id^="fitem_id_"][id*="answer_"],
+    .path-mod-assign [data-region="grade-panel"] {
+        background-color: $dark-bg-color;
+    }
+
+    .bg-white,
+    #page.drawers .main-inner,
+    .dropdown-menu,
+    .maincalendar .calendarmonth td:hover .day-number-circle,
+    .maincalendar .calendarmonth td:focus .day-number-circle,
+    .maincalendar .calendarmonth td:active .day-number-circle,
+    .modal-content,
+    .block .block-cards .btn.btn-link.btn-icon:hover,
+    .block .block-cards .btn.btn-link.btn-icon:focus,
+    .message-app,
+    .list-group-item,
+    .moodle-dialogue-base .moodle-dialogue-wrap,
+    .page-link:hover,
+    .bg-light,
+    &.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax,
+    &.yui-skin-sam .yui-layout.path-mod-chat-gui_ajax .yui-layout-unit.yui-layout-unit-center div.yui-layout-bd,
+    .mdl-chat-my-entry .chat-message .text,
+    .chooserdialogue .moodle-dialogue-wrap .moodle-dialogue-bd {
+        /* stylelint-disable-next-line declaration-no-important */
+        background-color: $dark-box-bg-color !important;
+    }
+
+    .dropdown-menu,
+    .dropdown-divider,
+    #frontpage-available-course-list .coursebox,
+    #frontpage-course-list .coursebox,
+    .course-search-result .coursebox,
+    .border-bottom,
+    .border-left,
+    .border-right,
+    .modal-header,
+    .modal-footer,
+    .mform fieldset,
+    .form-control,
+    .activity-item:not(.activityinline),
+    .course-section,
+    .generaltable th,
+    .generaltable td,
+    .table-bordered th,
+    .table-bordered td,
+    .path-mod .activity-information .activity-dates,
+    .fp-navbar,
+    .filepicker-filelist,
+    .filemanager-container,
+    .fp-iconview .fp-thumbnail,
+    .fp-iconview .fp-thumbnail img,
+    .moodle-dialogue-base .moodle-dialogue-wrap,
+    .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd,
+    .card,
+    .page-link,
+    .page-link:hover,
+    .custom-select,
+    .table th,
+    .table td,
+    .table thead th,
+    .border,
+    .border-top,
+    body#page-question-type-multichoice div[id^="fitem_id_"][id*="fraction_"],
+    body#page-question-type-multichoice div[id^="fitem_id_"][id*="feedback_"],
+    body#page-question-type-multichoice div[id^="fitem_id_"][id*="answer_"],
+    .popover-region-container,
+    .popover-region-footer-container,
+    .popover-region-header-container {
+        /* stylelint-disable-next-line declaration-no-important */
+        border-color: $gray-800 !important;
+    }
+
+    .nav-tabs .nav-link.active,
+    .nav-tabs .nav-item.show .nav-link {
+        border-color: $dark-link-color;
+    }
+
+    .navbar.fixed-top .divider {
+        background-color: $gray-800;
+    }
+
+    .navbar.fixed-left,
+    .path-mod-chat .yui-layout-unit-bottom,
+    #chat-input-area,
+    #chat-input-area table.generaltable,
+    #chat-input-area table.generaltable td.cell,
+    #page-mod-quiz-edit ul.slots li.section li.activity,
+    #page-mod-quiz-edit .section .activity .actions,
+    #page-mod-quiz-edit ul.slots li.section li.activity .instancemaxmarkcontainer,
+    .popover-region-container,
+    .popover-region-footer-container,
+    .no-left-nav .navbar .secondary-navbar nav,
+    .swiper-slide .ratio {
+        background-color: #101216;
+    }
+
+    .drawer,
+    .form-control,
+    .custom-select,
+    textarea,
+    #input-message,
+    .bg-primary-light,
+    .action-menu .dropdown-subpanel.content-displayed {
+        background-color: $gray-900;
+    }
+
+    .moodle-dialogue-base .moodle-dialogue-lightbox {
+        background-color: $black;
+    }
+
+    .dropdown-menu,
+    .drawer-toggles .drawer-toggler .btn {
+        box-shadow: $dark-box-shadow;
+    }
+
+    .block_myoverview,
+    .dashboard-card-footer,
+    .fp-iconview .fp-filename-field .fp-filename {
+        background-color: transparent;
+    }
+
+    .frontpage-slider .swiper-slide .ratio .image-wrapper + .content-wrapper {
+        background-color: rgba($black, .5);
+    }
+
+    hr {
+        border-color: rgba($white, .1);
+    }
+
+    .popover-region-toggle::before {
+        border-bottom-color: $gray-800;
+    }
+
+    .popover-region-toggle::after {
+        border-bottom-color: #101216;
+    }
+
+    .navbar .secondary-navbar .usermenu .dropdown-menu .submenu .header .icon,
+    img.icon,
+    .fp-pathbar .fp-path-folder,
+    .fp-pathbar .fp-path-folder-name,
+    &.yui-skin-sam .yui-layout-unit .yui-resize-handle-r .yui-layout-resize-knob,
+    &.yui-skin-sam .yui-layout-unit .yui-resize-handle-l .yui-layout-resize-knob {
+        filter: invert(1);
+    }
+
+    .tox-tinymce {
+        filter: grayscale(100%) invert(95%);
+    }
+
+    .breadcrumb-item:last-child,
+    .breadcrumb-item.active,
+    .breadcrumb-item a:hover,
+    .btn-link:hover {
+        color: $white;
+    }
+
+    .navbar .navbar-toggler-icon {
+        background-image: url([[pix:theme|burger-menu-white]]);
+    }
+
+    @include media-breakpoint-down(sm) {
+        .nav-tabs:not(.more-nav),
+        .nav-pills {
+            .nav-link {
+                &.active {
+                    /* stylelint-disable-next-line declaration-no-important */
+                    border-color: $white !important;
+                    /* stylelint-disable-next-line declaration-no-important */
+                    color: $white !important;
+                }
+            }
+        }
+    }
+
+    .bg-pulse-grey {
+        animation: bg-pulse-grey-dark 2s infinite linear;
+    }
 }
 
 @keyframes bg-pulse-grey-dark {
-  0% {
-    background-color: $gray-700;
-  }
-  50% {
-    background-color: darken($gray-700, 5%);
-  }
-  100% {
-    background-color: $gray-700;
-  }
+    0% {
+        background-color: $gray-700;
+    }
+    50% {
+        background-color: darken($gray-700, 5%);
+    }
+    100% {
+        background-color: $gray-700;
+    }
 }

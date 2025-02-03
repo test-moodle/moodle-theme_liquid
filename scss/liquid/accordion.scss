@@ -1,51 +1,53 @@
 .accordion-item {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .accordion-button {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 1.5rem 2.5rem 1.5rem 1.5rem;
-  border: 0;
-  background-color: transparent;
-  text-align: left;
-  color: $primary;
-  font-size: $font-size-base;
-  transition: color .2s ease-in-out;
-
-  &::after {
-    position: absolute;
-    top: calc(50% - .5em);
-    right: 1.5rem;
-    @extend .fa-solid;
-    content: fa-content($fa-var-chevron-up);
-    transition: transform .2s ease-in-out;
-  }
-
-  &.collapsed {
-    color: $body-color;
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+    border: 0;
+    background-color: transparent;
+    text-align: left;
+    color: $primary;
+    font-size: $font-size-base;
+    transition: color .2s ease-in-out;
 
     &::after {
-      transform: rotate(180deg);
+        position: absolute;
+        top: calc(50% - .5em);
+        right: 1.5rem;
+        @extend .fa-solid;
+        content: fa-content($fa-var-chevron-up);
+        transition: transform .2s ease-in-out;
     }
-  }
+
+    &.collapsed {
+        color: $body-color;
+
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
 }
 
 .accordion-header {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .accordion-body {
-  padding: 0 1.5rem 1.5rem;
+    padding: 0 1.5rem 1.5rem;
 
-  p, ul, ol {
-    &:last-child {
-      margin-bottom: 0;
+    p,
+    ul,
+    ol {
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
-  }
 }

@@ -1,181 +1,182 @@
 .pagelayout-login {
-  #page {
-    padding: 0 !important;
+    #page {
+        padding: 0;
+        background: none;
+        background-color: $primary;
+
+        @include media-breakpoint-up(lg) {
+            margin-left: 0;
+        }
+
+        #page-content {
+            height: 100%;
+            margin: 0;
+
+            #region-main-box {
+                padding: 0;
+
+                #region-main {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    &#page-login-forgot_password {
+        .generalbox {
+            margin: auto;
+            padding: 1rem 2rem;
+            color: $white;
+
+            @include media-breakpoint-up(lg) {
+                width: 50%;
+                max-width: 800px;
+            }
+        }
+
+        .mform {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 2rem;
+            background-color: $white;
+            flex: 1 1 auto;
+
+            @include media-breakpoint-up(lg) {
+                width: 50%;
+                max-width: 800px;
+                margin: 0;
+                flex: 0 0 auto;
+                justify-content: center;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            fieldset {
+                margin-bottom: 3rem;
+                padding-bottom: 3rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border-bottom: 0;
+                }
+
+                .fcontainer {
+                    display: flex;
+                    align-items: flex-end;
+
+                    .form-group {
+                        flex: 1 1 auto;
+                        margin: 0;
+
+                        > div {
+                            flex: 0 0 auto;
+                            max-width: none;
+                            padding: 0;
+                        }
+
+                        .form-control {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+
+                    .femptylabel {
+                        margin: 0 0 0 1rem;
+                        flex: 0 0 auto;
+
+                        .col-form-label {
+                            display: none;
+                        }
+
+                        .felement {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.login-wrapper {
+    align-items: unset;
+    justify-content: unset;
+}
+
+.login-container {
+    /* stylelint-disable-next-line declaration-no-important */
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
     background: none;
-    background-color: $primary;
+    box-shadow: none;
+
+    > div {
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+        }
+    }
+
+    .action-menu-trigger a {
+        margin: 0;
+    }
+}
+
+.loginimage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    padding: 3rem;
 
     @include media-breakpoint-up(lg) {
-      margin-left: 0;
+        flex: 1 1 auto;
     }
 
-    #page-content {
-      height: 100%;
-      margin: 0;
-
-      #region-main-box {
-        padding: 0;
-
-        #region-main {
-          padding: 0;
-        }
-      }
+    img {
+        max-width: 200px;
     }
-  }
+}
 
-  &#page-login-forgot_password {
-    .generalbox {
-      margin: auto;
-      padding: 1rem 2rem;
-      color: $white;
+.loginform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: $white;
+    flex: 1 1 auto;
 
-      @include media-breakpoint-up(lg) {
-        width: 50%;
-        max-width: 800px;
-      }
-    }
-
-    .mform {
-      display: flex;
-      flex-direction: column;
-      padding: 1rem 2rem;
-      background-color: $white;
-      flex: 1 1 auto;
-
-      @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
         width: 50%;
         max-width: 800px;
         margin: 0;
         flex: 0 0 auto;
-        justify-content: center;
         border-radius: 0;
         box-shadow: none;
-      }
-
-      fieldset {
-        margin-bottom: 3rem;
-        padding-bottom: 3rem;
-
-        &:last-child {
-          margin-bottom: 0;
-          padding-bottom: 0;
-          border-bottom: 0;
-        }
-
-        .fcontainer {
-          display: flex;
-          align-items: flex-end;
-
-          .form-group {
-            flex: 1 1 auto;
-            margin: 0;
-
-            > div {
-              flex: 0 0 auto;
-              max-width: none;
-              padding: 0 !important;
-            }
-
-            .form-control {
-              display: block;
-              width: 100%;
-            }
-          }
-
-          .femptylabel {
-            margin: 0 0 0 1rem;
-            flex: 0 0 auto;
-
-            .col-form-label {
-              display: none !important;
-            }
-
-            .felement {
-              flex: 0 0 100%;
-              max-width: 100%;
-              padding: 0;
-            }
-          }
-        }
-      }
     }
-  }
-}
-
-.login-wrapper {
-  align-items: unset;
-  justify-content: unset;
-}
-
-.login-container {
-  width: 100% !important;
-  margin: 0;
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-
-  > div {
-    display: flex;
-    flex-direction: column;
-
-    @include media-breakpoint-up(lg) {
-      flex-direction: row;
-    }
-  }
-
-  .action-menu-trigger a {
-    margin: 0;
-  }
-}
-
-.loginimage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 auto;
-  padding: 3rem;
-
-  @include media-breakpoint-up(lg) {
-    flex: 1 1 auto;
-  }
-
-  img {
-    max-width: 200px;
-  }
-}
-
-.loginform {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem 2rem;
-  text-align: center;
-  background-color: $white;
-  flex: 1 1 auto;
-
-  @include media-breakpoint-up(lg) {
-    width: 50%;
-    max-width: 800px;
-    margin: 0;
-    flex: 0 0 auto;
-    border-radius: 0;
-    box-shadow: none;
-  }
 }
 
 .login-heading,
 .login-form,
 .login-divider,
 .login-container .alert {
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .login-logo {
-  h1.login-heading {
-    color: $white;
-    font-weight: 500;
-    font-size: 3rem;
-  }
+    h1.login-heading {
+        color: $white;
+        font-weight: 500;
+        font-size: 3rem;
+    }
 }

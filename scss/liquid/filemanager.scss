@@ -1,10 +1,10 @@
 .fp-navbar {
-  + .fp-content {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
+    + .fp-content {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
 }
 
 .moodle-dialogue-base .moodle-dialogue-wrap {
-  border-radius: $border-radius-lg;
+    border-radius: $border-radius-lg;
 }

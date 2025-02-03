@@ -1,11 +1,11 @@
 #page-header {
-  h1.h2 {
-    font-weight: $headings-font-weight;
-  }
+    h1.h2 {
+        font-weight: $headings-font-weight;
+    }
 }
 
 #region-main {
-  background: none;
+    background: none;
 }
 
 .aalink,
@@ -13,58 +13,62 @@
 .arrow_link,
 a:not([class]),
 .activityinstance > a {
-  &.focus,
-  &:focus {
-    color: $primary;
-    background-color: transparent;
-    box-shadow: none;
-    text-decoration: underline;
-  }
+    &.focus,
+    &:focus {
+        color: $primary;
+        background-color: transparent;
+        box-shadow: none;
+        text-decoration: underline;
+    }
 }
 
 .header-actions-container {
-  .mform {
-    padding: 0;
-  }
+    .mform {
+        padding: 0;
+    }
 }
 
 .ratio {
-  &::before {
-    content: "";
-    display: block;
-    padding-top: var(--ratio);
-  }
+    &::before {
+        content: "";
+        display: block;
+        padding-top: var(--ratio);
+    }
 
-  &-16x9 {
-    --ratio: 56.25%;
-  }
+    &-16x9 {
+        --ratio: 56.25%;
+    }
 }
 
 .top-0 {
-  top: 0 !important;
+    /* stylelint-disable-next-line declaration-no-important */
+    top: 0 !important;
 }
 
 .start-0 {
-  left: 0 !important;
+    /* stylelint-disable-next-line declaration-no-important */
+    left: 0 !important;
 }
 
 @include media-breakpoint-down(sm) {
-  .nav-tabs:not(.more-nav),
-  .nav-pills {
-    background-color: transparent;
+    .nav-tabs:not(.more-nav),
+    .nav-pills {
+        background-color: transparent;
 
-    .nav-link {
-      background: transparent;
-      border: 1px;
+        .nav-link {
+            background: transparent;
+            border: 1px;
 
-      &.active {
-        @include button-outline-variant($primary);
-        background-color: transparent !important;
-        border-color: $primary !important;
-        border-width: 1px;
-        border-style: solid;
-        color: $primary !important;
-      }
+            &.active {
+                @include button-outline-variant($primary);
+                /* stylelint-disable-next-line declaration-no-important */
+                background-color: transparent !important;
+                border-color: $primary;
+                border-width: 1px;
+                border-style: solid;
+                /* stylelint-disable-next-line declaration-no-important */
+                color: $primary !important;
+            }
+        }
     }
-  }
 }

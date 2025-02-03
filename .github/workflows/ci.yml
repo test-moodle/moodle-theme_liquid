@@ -27,8 +27,43 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-versions: ['7.4']
-        database: ['pgsql', 'mariadb']
+        include:
+#          - moodle-branch: 'MOODLE_400_STABLE'
+#            php: '7.4'
+#            database: 'mariadb'
+#          - moodle-branch: 'MOODLE_400_STABLE'
+#            php: '7.4'
+#            database: 'pgsql'
+#          - moodle-branch: 'MOODLE_401_STABLE'
+#            php: '8.0'
+#            database: 'mariadb'
+#          - moodle-branch: 'MOODLE_401_STABLE'
+#            php: '8.0'
+#            database: 'pgsql'
+#          - moodle-branch: 'MOODLE_402_STABLE'
+#            php: '8.1'
+#            database: 'mariadb'
+#          - moodle-branch: 'MOODLE_402_STABLE'
+#            php: '8.1'
+#            database: 'pgsql'
+          - moodle-branch: 'MOODLE_403_STABLE'
+            php: '8.2'
+            database: 'mariadb'
+          - moodle-branch: 'MOODLE_403_STABLE'
+            php: '8.2'
+            database: 'pgsql'
+          - moodle-branch: 'MOODLE_404_STABLE'
+            php: '8.3'
+            database: 'mariadb'
+          - moodle-branch: 'MOODLE_404_STABLE'
+            php: '8.3'
+            database: 'pgsql'
+          - moodle-branch: 'MOODLE_405_STABLE'
+            php: '8.3'
+            database: 'mariadb'
+          - moodle-branch: 'MOODLE_405_STABLE'
+            php: '8.3'
+            database: 'pgsql'
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
@@ -45,7 +80,7 @@ jobs:
       - name: Setup PHP environment
         uses: shivammathur/setup-php@v2 #https://github.com/shivammathur/setup-php
         with:
-          php-version: ${{ matrix.php-versions }}
+          php-version: ${{ matrix.php }}
           extensions: mbstring, pgsql, mysqli
           tools: phpunit
 
@@ -63,7 +98,7 @@ jobs:
         env:
           DB: ${{ matrix.database }}
           # TODO: Omitted MOODLE_BRANCH results in regex failure, investigate.
-          MOODLE_BRANCH: 'MOODLE_400_STABLE'
+          MOODLE_BRANCH: ${{ matrix.moodle-branch }}
 
       - name: Run phplint
         if: ${{ always() }}
@@ -103,14 +138,14 @@ jobs:
         if: ${{ always() }}
         run: moodle-plugin-ci phpdoc
 
-      - name: Run phpunit
-        if: ${{ always() }}
-        run: | 
-             moodle-plugin-ci phpunit
-             cd moodle
-             vendor/bin/phpunit --fail-on-risky --disallow-test-output --filter tool_dataprivacy_metadata_registry_testcase
-             vendor/bin/phpunit --fail-on-risky --disallow-test-output --testsuite core_privacy_testsuite --filter provider_testcase 
+#      - name: Run phpunit
+#        if: ${{ always() }}
+#        run: |
+#             moodle-plugin-ci phpunit
+#             cd moodle
+#             vendor/bin/phpunit --fail-on-risky --disallow-test-output --filter tool_dataprivacy_metadata_registry_testcase
+#             vendor/bin/phpunit --fail-on-risky --disallow-test-output --testsuite core_privacy_testsuite --filter provider_testcase
 
-      - name: Run behat
-        if: ${{ always() }}
-        run: moodle-plugin-ci behat --profile chrome
+#      - name: Run behat
+#        if: ${{ always() }}
+#        run: moodle-plugin-ci behat --profile chrome

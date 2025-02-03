@@ -1,33 +1,33 @@
 .form-control {
-  &:focus {
-    border-color: $primary;
-  }
+    &:focus {
+        border-color: $primary;
+    }
 }
 
 .form-autocomplete-downarrow {
-  top: .6rem;
+    top: .6rem;
 }
 
 .simplesearchform .btn-submit {
-  background-color: $primary;
-  border-color: $primary;
-  color: $white;
+    background-color: $primary;
+    border-color: $primary;
+    color: $white;
 }
 
 .form-filetypes-descriptions {
-  margin-left: 1rem;
+    margin-left: 1rem;
 
-  p {
-    margin: 0;
-  }
+    p {
+        margin: 0;
+    }
 }
 
 select.form-control[size],
 select.form-control[multiple] {
-  padding-right: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .form-item .form-setting .form-defaultinfo {
-  width: 100%;
-  margin-top: .25rem;
+    width: 100%;
+    margin-top: .25rem;
 }

@@ -24,10 +24,22 @@
 
 namespace theme_liquid\output;
 
+use context_header;
 use html_writer;
 use theme_config;
 
+/**
+ * Renderers to align Moodle's HTML with that expected by Bootstrap
+ */
 class core_renderer extends \theme_boost\output\core_renderer {
+
+    /**
+     * The standard tags (meta tags, links to stylesheets and JavaScript, etc.)
+     * that should be included in the <head> tag. Designed to be called in theme
+     * layout.php files.
+     *
+     * @return string HTML fragment.
+     */
     public function standard_head_html() {
         $output = parent::standard_head_html();
         $theme = theme_config::load('liquid');
@@ -40,6 +52,12 @@ class core_renderer extends \theme_boost\output\core_renderer {
         return $output;
     }
 
+    /**
+     * Renders the header bar.
+     *
+     * @param context_header $contextheader Header bar object.
+     * @return string HTML for the header bar.
+     */
     protected function render_context_header(\context_header $contextheader) {
         if (!isset($contextheader->heading)) {
             $heading = $this->heading($this->page->heading, $contextheader->headinglevel, 'h1');

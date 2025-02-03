@@ -1,29 +1,29 @@
 .breadcrumb-item {
-  font-weight: 500;
+    font-weight: 500;
 
-  + .breadcrumb-item {
-    &::before {
-      @extend .fa-solid;
-      content: fa-content($fa-var-chevron-right);
-      position: relative;
-      top: -1px;
-      font-size: 10px;
-      float: none;
-      align-self: center;
+    + .breadcrumb-item {
+        &::before {
+            @extend .fa-solid;
+            content: fa-content($fa-var-chevron-right);
+            position: relative;
+            top: -1px;
+            font-size: 10px;
+            float: none;
+            align-self: center;
+        }
     }
-  }
 
-  a {
-    color: $gray-600;
+    a {
+        color: $gray-600;
 
-    &:hover {
-      color: $gray-900;
-      text-decoration: none;
+        &:hover {
+            color: $gray-900;
+            text-decoration: none;
+        }
     }
-  }
 
-  &:last-child,
-  &.active {
-    color: $primary;
-  }
+    &:last-child,
+    &.active {
+        color: $primary;
+    }
 }
