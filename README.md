@@ -1,73 +1,87 @@
 # Liquid - Moodle Theme
 
-Liquid is a highly customizable theme for Moodle. Its main advantages are the sleek design with automatic dark mode and a streamlined frontpage with configurable slider and FAQ blocks.
+**Liquid** is a sleek, modern, and highly customizable Moodle theme designed to elevate the user experience. With an automatic dark mode and a streamlined front page featuring configurable sliders and FAQ blocks, Liquid offers a polished and sophisticated aesthetic while enhancing Moodle’s core functionalities.
 
-It is perfect for a modern day Moodle instance where you want a sophisticated and polished look, while enhancing the core functionality of Moodle.
+Perfect for organizations and institutions seeking a visually refined and user-friendly online learning environment, Liquid delivers flexibility and innovative features for today’s digital education landscape.
 
-### Main Features
+## Key Features
 
-- **Highly customizable**
+- **Customizable Design:**
+  Extensive and intuitive theme settings allow administrators to tailor the look and feel of Moodle to align with institutional branding.
 
-   Liquid theme features extensive but intuitive settings where you can custom tailor your Moodle experience. 
+- **Automatic Dark Mode:**
+  Effortlessly switch between light and dark themes based on user preferences, with seamless color adjustments for a cohesive experience.
 
-- **Dark mode**
+- **Flexible Navigation:**
+  Choose between a contemporary sidebar menu or the traditional top menu to optimize site navigation.
 
-   When you choose the colours in the Liquid theme settings, you automatically get light mode and dark mode out of the box.
+- **Dynamic Front Page Slider:**
+  Captivate users from the moment they land on your site with an elegant, customizable image slider and engaging captions.
 
-- **Sidebar menu**
+- **Informative FAQ Block:**
+  Provide quick access to essential information with an optional front-page FAQ block to enhance user engagement and reduce support queries.
 
-   You have the flexibility to opt for a modern side navigation menu or retain the default top menu.
+## Theme Settings
 
-- **Frontpage slider**
+Easily accessible via **Site Administration > Appearance > Themes > Liquid (cog wheel)**, the theme provides comprehensive customization options:
 
-   First thing a user sees is the elegant frontpage slider, which you can customize with your own graphics and captions.
+1. **Color Settings:**
+   Define your custom color scheme for a unified visual identity.
 
-- **Frontpage FAQ block**
+2. **Typography Settings:**
+   Select fonts and adjust text sizes to create a visually appealing interface.
 
-   There is an optional FAQ block on the front page where you can implement the most crucial information, useful to every user.
+3. **Border Settings:**
+   Customize border shapes and sizes to fine-tune the design.
 
-### Settings
+4. **Front Page Slider:**
+   Enable and configure the front-page slider with custom images and captions.
 
-Accessible via **Site Administration -> Appearance -> Themes -> Liquid (cog wheel)**, the plugin offers:
+5. **FAQ Block:**
+   Activate and populate the front-page FAQ block with key user information.
 
-1. **Color settings**:
-    - Select your own colour scheme.
-2. **Typography settings**:
-    - Change font family and size.
-3. **Border settings**:
-    - Define border shape and size.
-4. **Frontpage slider**:
-    - Enable, set up and populate the front page slider.
-5. **Frontpage FAQ**:
-    - Enable, set up and populate the front page FAQ block.
-6. **Additional settings**:
-    - Set the location for navigation menu and customize social icons.
-7. **Advanced settings**:
-    - More settings for advanced users.
+6. **Additional Settings:**
+   Manage the navigation menu location and customize social icons.
+
+7. **Advanced Options:**
+   Access additional settings for advanced customization needs.
 
 ## Installation
 
+To install the Liquid theme, follow these steps:
+
 1. Clone or download the repository into the appropriate Moodle directory:
 
-```
-git clone https://github.com/AGILEDROP/moodle-theme_liquid.git
-```
+   ```bash
+   git clone https://github.com/AGILEDROP/moodle-theme_liquid.git
+   ```
 
-2. In Moodle, navigate to **Site Administration -> Notifications** and follow the prompts to install the theme.
+2. Navigate to **Site Administration > Notifications** in Moodle and follow the prompts to complete the installation.
 
 ## Usage
 
-1. Navigate to **Site Administration -> Appearance -> Themes**.
-2. Under "Liquid" theme, click on the "Select theme" button to make it your default theme.
+1. Go to **Site Administration > Appearance > Themes**.
+2. Select **Liquid** as your default theme by clicking the "Select theme" button.
 
 ## Dependencies
 
-This theme depends on Boost theme.
+Liquid is built upon and requires the **Boost theme** to function properly.
 
 ## Contributing
 
-We welcome contributions to enhance the Liquid theme. Here's how you can contribute:
+We welcome contributions to help enhance the Liquid theme and ensure it meets the evolving needs of Moodle users. Here’s how you can contribute:
 
-- **Report Issues:** Found a bug or want to suggest a feature? [Open an issue on GitHub](https://github.com/AGILEDROP/moodle-theme_liquid/issues/new).
-- **Submit Code:** [Fork the repository](https://github.com/AGILEDROP/moodle-theme_liquid/fork), make changes, and create a pull request for review.
-- **Translate:** Contribute translations via the [Moodle AMOS translator](https://lang.moodle.org/local/amos/view.php).
+- **Report Issues:**
+  Encountered a bug or have a feature suggestion? [Submit an issue on GitHub](https://github.com/AGILEDROP/moodle-theme_liquid/issues/new).
+
+- **Submit Code:**
+  [Fork the repository](https://github.com/AGILEDROP/moodle-theme_liquid/fork), implement your changes, and create a pull request for review.
+
+- **Translate:**
+  Help us provide translations by contributing via the [Moodle AMOS translator](https://lang.moodle.org/local/amos/view.php).
+
+## License
+
+Liquid is licensed under the **GPL v3 (GNU General Public License)**, ensuring open and collaborative development.
+
+We hope Liquid helps you create a more engaging and visually stunning Moodle experience. Thank you for choosing Liquid!
