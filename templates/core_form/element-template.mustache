@@ -45,7 +45,7 @@
 <div id="{{element.wrapperid}}"
      class="form-group row {{#error}}has-danger{{/error}} fitem {{#element.emptylabel}}femptylabel{{/element.emptylabel}} {{#advanced}}advanced{{/advanced}} {{{element.extraclasses}}} {{{element.parentclasses}}}"
      {{#element.groupname}}data-groupname="{{.}}"{{/element.groupname}}>
-    <div class="col-md-3 col-form-label text-right">
+    <div class="col-md-3 col-form-label text-right d-flex justify-content-start flex-md-row-reverse">
         {{# label}}{{$ label }}
             {{^element.staticlabel}}
                 <label id="{{element.id}}_label"
