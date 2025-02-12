@@ -1,3 +1,4 @@
+<?php
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -14,20 +15,20 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Configuration for theme Liquid.
+ * Hook callbacks for theme_liquid.
  *
- * @module     theme_liquid/config
+ * @package    theme_liquid
+ *
  * @copyright  2025 Agiledrop ltd.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-define([], function() {
-    window.requirejs.config({
-        paths: {
-            "swiper": M.cfg.wwwroot + '/theme/liquid/js/swiper/swiper-bundle.min',
-        },
-        shim: {
-            'swiper': {exports: 'Swiper'},
-        }
-    });
-});
+defined('MOODLE_INTERNAL') || die();
+
+$callbacks = [
+    [
+        'hook' => \core\hook\output\before_html_attributes::class,
+        'callback' => '\theme_liquid\hook_callbacks::before_html_attributes',
+        'priority' => 0,
+    ],
+];
